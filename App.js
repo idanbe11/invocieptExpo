@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert} from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
 
 
 // Cards componets
@@ -7,24 +7,14 @@ import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert} from 'react-n
 import LoadingPage from './Cards/Loading/loadingPage';
 
       // Login
-
+import LoginPage from './Cards/Login/LoginPage';
 
 export default function App() {
-const handlePress= () => console.log("text pressed");
   return (
-    <SafeAreaView style={styles.container}>
-      
-      <StatusBar style="auto" />
-    </SafeAreaView>
+    <View >
+    {/* <LoadingPage/> */}
+    <LoginPage/>
+    </View>
+     
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
-    alignItems:'center',
-   
-  },
-});6 
