@@ -55,7 +55,6 @@ export default function LoginPage({text , onPress}) {
       top: 40,
     },
     buttonTitle: {
-      direction:'rtl',
       color:'black',
       fontSize: 20,
       width:143,
