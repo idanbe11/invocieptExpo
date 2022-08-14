@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
 
 
 
@@ -18,6 +18,7 @@ export default function LoginPage({text , onPress}) {
                     <Text style={styles.buttonTitle}>התחבר עם SMS</Text>
                   </View>
                 </TouchableOpacity>
+                <TextInput style={styles.input} value={text} keyboardType="numeric" placeholder="הזן מייל"></TextInput>
       </SafeAreaView>
     );
   }
@@ -61,6 +62,17 @@ export default function LoginPage({text , onPress}) {
       fontSize: 20,
       width:143,
       height:13,
+    },
+    input:{
+      textAlign: 'right',
+      position: 'absolute',
+      width: 277,
+      height: 30,
+      left: 55,
+      top: 320,
+      backgroundColor:'#F9FCFF',
+      borderColor: '1 hidden rgba(149, 149, 149, 0.64)',
+     
     },
   });
   
