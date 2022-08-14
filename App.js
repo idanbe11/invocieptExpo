@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHigh
 
 // Cards componets
       // Loading
-import LoadingPage from './Cards/Loading/loadingPage';
+import LoadingPage from './Cards/Loading/LoadingPage';
 
       // Login
 import LoginPage from './Cards/Login/LoginPage';
@@ -12,8 +12,7 @@ import LoginPage from './Cards/Login/LoginPage';
 export default function App() {
   return (
     <View >
-    {/* <LoadingPage/> */}
-    <LoginPage/>
+     <LoadingPage/> 
     </View>
      
   );
