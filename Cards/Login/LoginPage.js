@@ -12,6 +12,8 @@ export default function LoginPage({text , onPress}) {
                   <View style={styles.button}>
                     <Text style={styles.buttonTitle}>התחבר עם מייל</Text>
                   </View>
+                </TouchableOpacity>
+                <TouchableOpacity>
                   <View style={styles.button2}>
                     <Text style={styles.buttonTitle}>התחבר עם SMS</Text>
                   </View>
@@ -41,7 +43,7 @@ export default function LoginPage({text , onPress}) {
       backgroundColor: '#F8F8FF',
       padding: 20,
       borderRadius: 5,
-      width:143,
+      width:165,
       left: 210,
       top: 40,
     },
@@ -50,7 +52,7 @@ export default function LoginPage({text , onPress}) {
       backgroundColor: '#F8F8FF',
       padding: 20,
       borderRadius: 5,
-      width:143,
+      width:165,
       left: 20,
       top: 40,
     },
