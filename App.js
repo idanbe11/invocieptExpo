@@ -12,7 +12,8 @@ import LoginPage from './Cards/Login/LoginPage';
 export default function App() {
   return (
     <View >
-     <LoadingPage/> 
+     {/*LoadingPage/> */}
+     <LoginPage/>
     </View>
      
   );

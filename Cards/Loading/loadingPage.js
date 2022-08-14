@@ -16,7 +16,7 @@ const handlePress= () => console.log("text pressed");
 
 function onReady(callback) {
   var intervalId = window.setInterval(function() {
-    if (document.getElementsByTagName('body')[0] !== undefined) {
+    if (document.getElementsByTagName('.body')[0] !== undefined) {
       window.clearInterval(intervalId);
       callback.call(this);
     }
