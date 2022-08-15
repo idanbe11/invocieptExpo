@@ -32,7 +32,7 @@ export default function LoginPage({text , onPress}) {
                 </TouchableOpacity>
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonGoogleLogin}>
-                    <Text style={styles.buttonGoogleLoginTitle}>התחבר באמצעות</Text>
+                    <Text style={styles.buttonGoogleTitle}>התחבר באמצעות</Text>
                   </View>
                 </TouchableOpacity>
               
@@ -147,14 +147,21 @@ export default function LoginPage({text , onPress}) {
       position: 'absolute',
       width: 253,
       height: 52,
-      left: 64,
-      top: 530,
+      left: 74,
+      top: 450,
       backgroundColor: '#FFFFFF',
       shadowOffset: {
-        height: 1,
-        width: 0.5
+      height: 1,
+      width: 0.5
       },
       borderRadius: 12,
+    },
+    buttonGoogleTitle: { 
+      fontWeight: 'bold',
+      textAlign:'center',
+      fontSize: 18,
+      marginTop: 9,
+      color:'black',
     },
   });
   
