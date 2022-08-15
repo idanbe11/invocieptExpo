@@ -98,7 +98,7 @@ export default function LoginPage({text , onPress}) {
       width: 303,
       height: 35,
       left: 55,
-      top: 320,
+      top: 300,
       backgroundColor:'#F8F8FF',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
@@ -113,7 +113,7 @@ export default function LoginPage({text , onPress}) {
       width: 303,
       height: 35,
       left: 55,
-      top: 400,
+      top: 380,
       backgroundColor:'#F8F8FF',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
@@ -128,7 +128,7 @@ export default function LoginPage({text , onPress}) {
       borderRadius: 5,
       width:165,
       left: 195,
-      top: 290,
+      top: 280,
     },
     buttonLogin: { 
       position:'absolute',
