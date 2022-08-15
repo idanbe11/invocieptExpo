@@ -138,7 +138,7 @@ export default function LoginPage({text , onPress}) {
       width:281,
       height: 52,
       left: 61.5,
-      top: 370,
+      top: 360,
       fontWeight: 'bold',
       textAlign:'center',
       shadowColor: 'lightgray',
