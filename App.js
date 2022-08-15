@@ -8,11 +8,14 @@ import LoadingPage from './Cards/Loading/LoadingPage';
 
       // Login
 import LoginPage from './Cards/Login/LoginPage';
+import LoginSMS from './Cards/Login/LoginSMS';
 
 export default function App() {
   return (
     <View >
-     {/*LoadingPage/> */}
+     {/*LoadingPage/> 
+    
+     <LoginSMS/>*/} 
      <LoginPage/>
     </View>
      
