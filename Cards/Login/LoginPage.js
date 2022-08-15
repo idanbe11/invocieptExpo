@@ -31,8 +31,18 @@ export default function LoginPage({text , onPress}) {
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={onPress}>
-                  <View style={styles.buttonGoogleLogin}>
+                  <View style={styles.buttonGoogle}>
                     <Text style={styles.buttonGoogleTitle}>התחבר באמצעות</Text>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={onPress}>
+                  <View style={styles.buttonFacebook}>
+                    <Text style={styles.buttonFacebookTitle}>התחבר באמצעות</Text>
+                  </View>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={onPress}>
+                  <View style={styles.buttonRegister}>
+                    <Text style={styles.buttonRegisterTitle}> הירשם </Text>
                   </View>
                 </TouchableOpacity>
               
@@ -53,7 +63,7 @@ export default function LoginPage({text , onPress}) {
       textAlign:'center',
       color: 'black',
       fontSize: 40,
-      marginTop: 130,
+      marginTop: 100,
       fontWeight: 'bold',
     },
     button: { 
@@ -117,7 +127,7 @@ export default function LoginPage({text , onPress}) {
       borderRadius: 5,
       width:165,
       left: 195,
-      top: 270,
+      top: 290,
     },
     buttonLogin: { 
       position:'absolute',
@@ -127,7 +137,7 @@ export default function LoginPage({text , onPress}) {
       width:281,
       height: 52,
       left: 61.5,
-      top: 350,
+      top: 370,
       fontWeight: 'bold',
       textAlign:'center',
       shadowColor: 'lightgray',
@@ -143,12 +153,12 @@ export default function LoginPage({text , onPress}) {
       marginTop: -9,
       color:'white',
     },
-    buttonGoogleLogin: { 
+    buttonGoogle: { 
       position: 'absolute',
       width: 253,
       height: 52,
       left: 74,
-      top: 450,
+      top: 460,
       backgroundColor: '#FFFFFF',
       shadowOffset: {
       height: 1,
@@ -162,6 +172,42 @@ export default function LoginPage({text , onPress}) {
       fontSize: 18,
       marginTop: 9,
       color:'black',
+    },
+    buttonFacebook: { 
+      position: 'absolute',
+      width: 253,
+      height: 52,
+      left: 74,
+      top: 550,
+      backgroundColor: '#FFFFFF',
+      shadowOffset: {
+      height: 1,
+      width: 0.5
+      },
+      borderRadius: 12,
+    },
+    buttonFacebookTitle: { 
+      fontWeight: 'bold',
+      textAlign:'center',
+      fontSize: 18,
+      marginTop: 9,
+      color:'black',
+    },
+    buttonRegister: { 
+      position: 'absolute',
+      width: '100%',
+      height: 60,
+      left: 0.2,
+      top: 635,
+      backgroundColor: '#7471F2',
+    },
+    buttonRegisterTitle: { 
+      fontWeight: 'bold',
+      textAlign:'center',
+      fontSize: 24,
+      marginTop: 10,
+      marginLeft:26,
+      color: 'white',
     },
   });
   
