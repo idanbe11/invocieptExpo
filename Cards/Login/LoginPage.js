@@ -30,6 +30,12 @@ export default function LoginPage({text , onPress}) {
                     <Text style={styles.buttonLoginTitle}>כניסה</Text>
                   </View>
                 </TouchableOpacity>
+                <TouchableOpacity onPress={onPress}>
+                  <View style={styles.buttonGoogleLogin}>
+                    <Text style={styles.buttonGoogleLoginTitle}>התחבר באמצעות</Text>
+                  </View>
+                </TouchableOpacity>
+              
       </SafeAreaView>
     );
   }
@@ -136,6 +142,19 @@ export default function LoginPage({text , onPress}) {
       fontSize: 22,
       marginTop: -9,
       color:'white',
+    },
+    buttonGoogleLogin: { 
+      position: 'absolute',
+      width: 253,
+      height: 52,
+      left: 64,
+      top: 530,
+      backgroundColor: '#FFFFFF',
+      shadowOffset: {
+        height: 1,
+        width: 0.5
+      },
+      borderRadius: 12,
     },
   });
   
