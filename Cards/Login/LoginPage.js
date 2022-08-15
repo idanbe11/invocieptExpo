@@ -18,7 +18,13 @@ export default function LoginPage({text , onPress}) {
                     <Text style={styles.buttonTitle}>התחבר עם SMS</Text>
                   </View>
                 </TouchableOpacity>
-                <TextInput style={styles.input} value={text} keyboardType="numeric" placeholder="הזן מייל"></TextInput>
+                <TextInput style={styles.inputMail} value={text} keyboardType="numeric" placeholder="הזן מייל"></TextInput>
+                <TextInput style={styles.inputPassword} value={text} keyboardType="numeric" placeholder="הזן סיסמא"></TextInput>
+                <TouchableOpacity onPress={onPress}>
+                  <View style={styles.buttonForget}>
+                    <Text style={styles.buttonTitle}>שכחתי סיסמא</Text>
+                  </View>
+                </TouchableOpacity>
       </SafeAreaView>
     );
   }
@@ -45,7 +51,7 @@ export default function LoginPage({text , onPress}) {
       padding: 20,
       borderRadius: 5,
       width:165,
-      left: 210,
+      left: 195,
       top: 40,
     },
     button2: { 
@@ -54,25 +60,54 @@ export default function LoginPage({text , onPress}) {
       padding: 20,
       borderRadius: 5,
       width:165,
-      left: 20,
+      left: 5,
       top: 40,
     },
     buttonTitle: {
       color:'black',
-      fontSize: 20,
+      fontSize: 18,
       width:143,
       height:13,
     },
-    input:{
+    inputMail:{
+      fontSize: 18,
       textAlign: 'right',
       position: 'absolute',
-      width: 277,
-      height: 30,
+      width: 303,
+      height: 35,
       left: 55,
       top: 320,
       backgroundColor:'#F9FCFF',
-      borderColor: '1 hidden rgba(149, 149, 149, 0.64)',
-     
+      shadowColor: 'rgba(169, 169, 169, 0.64)',
+      shadowOffset: {
+      height: 1,
+      width: 0.5
+    }
     },
+    inputPassword:{
+      fontSize: 18,
+      textAlign: 'right',
+      position: 'absolute',
+      width: 303,
+      height: 35,
+      left: 55,
+      top: 400,
+      backgroundColor:'#F9FCFF',
+      shadowColor: 'rgba(169, 169, 169, 0.64)',
+      shadowOffset: {
+      height: 1,
+      width: 0.5
+    }
+    },
+    buttonForget: { 
+      position:'absolute',
+      backgroundColor: '#F8F8FF',
+      padding: 20,
+      borderRadius: 5,
+      width:165,
+      left: 195,
+      top: 270,
+    },
+   
   });
   
