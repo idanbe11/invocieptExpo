@@ -88,7 +88,8 @@ export default function LoginPage({text , onPress}) {
       color:'black',
       fontSize: 18,
       width:143,
-      height:13,
+      height:13,    
+      fontWeight: 'bold',
     },
     inputMail:{
       fontSize: 18,
