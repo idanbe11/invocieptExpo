@@ -82,11 +82,11 @@ export default function LoginPage({text , onPress}) {
       height: 35,
       left: 55,
       top: 320,
-      backgroundColor:'#F9FCFF',
+      backgroundColor:'#F8F8FF',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
-      height: 1,
-      width: 0.5
+      height: 1.4,
+      width: 0.1
     }
     },
     inputPassword:{
@@ -97,12 +97,12 @@ export default function LoginPage({text , onPress}) {
       height: 35,
       left: 55,
       top: 400,
-      backgroundColor:'#F9FCFF',
+      backgroundColor:'#F8F8FF',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
-      height: 1,
-      width: 0.5
-    }
+      height: 1.4,
+      width: 0.1
+      }
     },
     buttonForget: { 
       position:'absolute',
@@ -133,8 +133,8 @@ export default function LoginPage({text , onPress}) {
     buttonLoginTitle: { 
       fontWeight: 'bold',
       textAlign:'center',
-      fontSize:22,
-      marginTop:-9,
+      fontSize: 22,
+      marginTop: -9,
       color:'white',
     },
   });
