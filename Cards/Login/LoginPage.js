@@ -25,6 +25,11 @@ export default function LoginPage({text , onPress}) {
                     <Text style={styles.buttonTitle}>שכחתי סיסמא</Text>
                   </View>
                 </TouchableOpacity>
+                <TouchableOpacity onPress={onPress}>
+                  <View style={styles.buttonLogin}>
+                    <Text style={styles.buttonLoginTitle}>כניסה</Text>
+                  </View>
+                </TouchableOpacity>
       </SafeAreaView>
     );
   }
@@ -108,6 +113,29 @@ export default function LoginPage({text , onPress}) {
       left: 195,
       top: 270,
     },
-   
+    buttonLogin: { 
+      position:'absolute',
+      backgroundColor: '#7471F2',
+      padding: 20,
+      borderRadius: 12,
+      width:281,
+      height: 52,
+      left: 61.5,
+      top: 350,
+      fontWeight: 'bold',
+      textAlign:'center',
+      shadowColor: 'lightgray',
+      shadowOffset: {
+      height: 1,
+      width: 0.5
+    }
+    },
+    buttonLoginTitle: { 
+      fontWeight: 'bold',
+      textAlign:'center',
+      fontSize:22,
+      marginTop:-9,
+      color:'white',
+    },
   });
   
