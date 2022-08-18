@@ -9,14 +9,16 @@ import LoadingPage from './Cards/Loading/LoadingPage';
       // Login
 import LoginPage from './Cards/Login/LoginPage';
 import LoginSMS from './Cards/Login/LoginSMS';
+import ForgetPassword from './Cards/Login/ForgetPassword';
 
 export default function App() {
   return (
     <View >
      {/*LoadingPage/> 
     
-     <LoginSMS/>*/} 
-     <LoginPage/>
+     <LoginSMS/>
+     <LoginPage/>*/} 
+     <ForgetPassword/>
     </View>
      
   );
