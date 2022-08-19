@@ -75,7 +75,7 @@ export default function HomePage({text , onPress}) {
     body: {
       width: 390,
       height: 844,
-      backgroundColor: 'white',
+      backgroundColor: '#f7f7fc',
     },
     container: { 
         height:260,
