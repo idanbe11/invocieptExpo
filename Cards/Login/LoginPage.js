@@ -35,7 +35,7 @@ export default function LoginPage({text , onPress }) {
                   </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={onPress}>
+                <TouchableOpacity onPress={() => navigation.navigate('HomePage')}>
                   <View style={styles.buttonLogin}>
                     <Text style={styles.buttonLoginTitle}>כניסה</Text>
                   </View>

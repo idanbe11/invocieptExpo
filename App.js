@@ -15,6 +15,7 @@ import ChooseAccount from './Cards/Register/ChooseAccount';
 import ChooseBusiness from './Cards/Register/ChooseBusiness';
 import RegisterAsEmail from './Cards/Register/RegisterAsEmail';
 import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
+import HomePage from './Cards/Main/HomePage';
 
  function App() {
   const Stack = createStackNavigator();
@@ -29,6 +30,9 @@ import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
         <Stack.Screen name="ChooseBusiness" component={ChooseBusiness}/>
           <Stack.Screen name="RegisterAsEmail" component={RegisterAsEmail}/>
             <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
+          
+      <Stack.Screen name="HomePage" component={HomePage}/>
+      
   </Stack.Navigator> 
      
   );
