@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 // Cards componets
       // Loading
 import LoadingPage from './Cards/Loading/LoadingPage';
-
+ 
       // Login
 import LoginPage from './Cards/Login/LoginPage';
 import LoginSMS from './Cards/Login/LoginSMS';
@@ -21,14 +21,14 @@ import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
 
   return (
     <Stack.Navigator>
-    <Stack.Screen name="LoginPage" component={LoginPage}/>
-    <Stack.Screen name="LoginSMS" component={LoginSMS}/>
-    <Stack.Screen name="ForgetPassword" component={ForgetPassword}/>
+      <Stack.Screen name="LoginPage" component={LoginPage}/>
+      <Stack.Screen name="LoginSMS" component={LoginSMS}/>
+      <Stack.Screen name="ForgetPassword" component={ForgetPassword}/>
 
-    <Stack.Screen name="ChooseAccount" component={ChooseAccount}/>
-      <Stack.Screen name="ChooseBusiness" component={ChooseBusiness}/>
-        <Stack.Screen name="RegisterAsEmail" component={RegisterAsEmail}/>
-          <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
+      <Stack.Screen name="ChooseAccount" component={ChooseAccount}/>
+        <Stack.Screen name="ChooseBusiness" component={ChooseBusiness}/>
+          <Stack.Screen name="RegisterAsEmail" component={RegisterAsEmail}/>
+            <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
   </Stack.Navigator> 
      
   );
