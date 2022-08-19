@@ -14,8 +14,6 @@ import youtube from './Icons/youtube.png';
 import rating from './Icons/rating.png'; 
 import receipt from './Icons/receipt.png'; 
 
-//background img
-import background from './Icons/background.png'; 
 
 
 export default function HomePage({text , onPress}) { 
@@ -61,7 +59,6 @@ export default function HomePage({text , onPress}) {
             <Image source={creditcard} style={styles.creditCardIcon} />
                 <Text style={styles.creditCardTitle}>סליקה</Text>
         </TouchableOpacity>
-
         </View>
 
 
@@ -78,17 +75,16 @@ export default function HomePage({text , onPress}) {
     body: {
       width: 390,
       height: 844,
-      backgroundColor: '#F8F8FF',
+      backgroundColor: 'white',
     },
     container: { 
-        backgroundColor: 'white',
         height:260,
-        borderRadius:12,
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
-        shadowOpacity: 1.4,
+        borderRadius:18,
+        shadowColor: '#ebebfa',
+        shadowOpacity: 50,
         shadowOffset: {
-        height: 1.4,
-        width: 0.4
+        height: 5.5,
+        width: 4
       }
       },
     backgroundImg:{
@@ -136,14 +132,14 @@ export default function HomePage({text , onPress}) {
         backgroundColor:'white',
         width:360,
         height:80,
-        top:20,
+        top:25,
         left:17,
         borderRadius:17,
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
-        shadowOpacity: 2,
+        shadowColor: '#ebebfa',
+        shadowOpacity: 50,
         shadowOffset: {
-        height: 2,
-        width: 0.4
+        height: 6,
+        width: 6,
       }
       },
       ratingIcon: {        
