@@ -1,11 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput ,Picker} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
+
+import React, {useState} from 'react';
+import { useNavigation } from '@react-navigation/native';
 import RNPickerSelect from "react-native-picker-select";
 
 
-export default function ChooseAccount({text , onPress}) { 
+export default function ChooseAccount({text , onPress , route}) { 
   const handlePress= () => console.log("text pressed");
+  const navigation = useNavigation();
 
     return (
       <SafeAreaView style={styles.body}>
@@ -44,7 +47,7 @@ export default function ChooseAccount({text , onPress}) {
                 <Text style={styles.VerifyPasswordRegister} > אמת סיסמא </Text> 
                 <TextInput style={styles.inputVerifyPassword} value={text} keyboardType="numeric" placeholder=" הזן סיסמא שנית"></TextInput>
 
-                <TouchableOpacity onPress={onPress}>
+                <TouchableOpacity onPress={() => navigation.navigate('VerifyRegisterinfo')}>
                   <View style={styles.buttonRegister}>
                     <Text style={styles.buttonRegisterTitle}> הירשם </Text>
                   </View>

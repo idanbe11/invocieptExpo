@@ -1,21 +1,23 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
-import { LinearGradient } from 'expo-linear-gradient';
 
+import React, {useState} from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 export default function ChooseAccount({text , onPress}) { 
   const handlePress= () => console.log("text pressed");
+  const navigation = useNavigation();
     return (
       <SafeAreaView style={styles.body}>
                 <Text style={styles.innerText}>בחר סוג משתמש</Text>
 
-                <TouchableOpacity onPress={onPress}>
+                <TouchableOpacity onPress={() => navigation.navigate('ChooseBusiness')}>
                   <View style={styles.BusinessButton}>
                     <Text style={styles.BusinessTitle}> עצמאים </Text>
                   </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={onPress}>
+                <TouchableOpacity onPress={() => navigation.navigate('ChooseBusiness')}>
                   <View style={styles.CpaButton}>
                     <Text style={styles.CpaTitle}> רואה חשבון </Text>
                   </View>

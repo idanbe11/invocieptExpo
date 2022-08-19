@@ -1,46 +1,59 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
 
+import React, {useState} from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 
-export default function LoginPage({text , onPress}) { 
+export default function LoginPage({text , onPress }) {  
   const handlePress= () => console.log("text pressed");
+  const navigation = useNavigation();
+
     return (
       <SafeAreaView style={styles.body}>
+  
+
                 <Text style={styles.innerText}>התחברות</Text>
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.button}>
                     <Text style={styles.buttonTitle}>התחבר עם מייל</Text>
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity>
+
+                <TouchableOpacity onPress={() => navigation.navigate('LoginSMS')}>
                   <View style={styles.button2}>
                     <Text style={styles.buttonTitle}>התחבר עם SMS</Text>
                   </View>
                 </TouchableOpacity>
+
                 <TextInput style={styles.inputMail} value={text} keyboardType="numeric" placeholder="הזן מייל"></TextInput>
                 <TextInput style={styles.inputPassword} value={text} keyboardType="numeric" placeholder="הזן סיסמא"></TextInput>
-                <TouchableOpacity onPress={onPress}>
+
+                <TouchableOpacity onPress={() => navigation.navigate('ForgetPassword')}>
                   <View style={styles.buttonForget}>
                     <Text style={styles.buttonTitle}>שכחתי סיסמא</Text>
                   </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonLogin}>
                     <Text style={styles.buttonLoginTitle}>כניסה</Text>
                   </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonGoogle}>
                     <Text style={styles.buttonGoogleTitle}>התחבר באמצעות</Text>
                   </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonFacebook}>
                     <Text style={styles.buttonFacebookTitle}>התחבר באמצעות</Text>
                   </View>
                 </TouchableOpacity>
-                <TouchableOpacity onPress={onPress}>
+
+                <TouchableOpacity onPress={() => navigation.navigate('ChooseAccount')}>
                   <View style={styles.buttonRegister}>
                     <Text style={styles.buttonRegisterTitle}> הירשם </Text>
                   </View>

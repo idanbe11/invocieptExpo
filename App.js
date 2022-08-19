@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
 
-
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 // Cards componets
       // Loading
 import LoadingPage from './Cards/Loading/LoadingPage';
@@ -15,19 +16,27 @@ import ChooseBusiness from './Cards/Register/ChooseBusiness';
 import RegisterAsEmail from './Cards/Register/RegisterAsEmail';
 import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
 
-export default function App() {
+ function App() {
+  const Stack = createStackNavigator();
+
   return (
-    <View >
-     {/*LoadingPage/> 
-    
-     <LoginSMS/>
-     <LoginPage/>
-     <ForgetPassword/> 
-          <ChooseAccount/>
-            <ChooseBusiness/>
-            <RegisterAsEmail/>*/}
-            <VerifyRegisterinfo/> 
-    </View>
+    <Stack.Navigator>
+    <Stack.Screen name="LoginPage" component={LoginPage}/>
+    <Stack.Screen name="LoginSMS" component={LoginSMS}/>
+    <Stack.Screen name="ForgetPassword" component={ForgetPassword}/>
+
+    <Stack.Screen name="ChooseAccount" component={ChooseAccount}/>
+      <Stack.Screen name="ChooseBusiness" component={ChooseBusiness}/>
+        <Stack.Screen name="RegisterAsEmail" component={RegisterAsEmail}/>
+          <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
+  </Stack.Navigator> 
      
   );
+}
+export default () => {
+  return(
+    <NavigationContainer>
+      <App/>
+    </NavigationContainer>
+  )
 }
