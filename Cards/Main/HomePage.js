@@ -35,21 +35,33 @@ export default function HomePage({text , onPress}) {
         <Image source={emoji} style={styles.EmojiIcon} /> </Text>
         </View>
 
-        <View style={styles.homeIcons}>
+        <View style={styles.homeIcons}>   
+
+        <TouchableOpacity onPress={onPress}>
             <Image source={rating} style={styles.ratingIcon} />
-            <Text>לקוחות</Text>
-
+                <Text style={styles.ratingTitle}>לקוחות</Text>
+        </TouchableOpacity>
+           
+        <TouchableOpacity onPress={onPress}>
             <Image source={youtube} style={styles.youtubeIcon} />
-            <Text>הדרכה</Text>
+                <Text style={styles.youtubeTitle}>הדרכה</Text>
+        </TouchableOpacity>
 
+        <TouchableOpacity onPress={onPress}>
             <Image source={sendDocument} style={styles.sendDocumentIcon} />
-            <Text>שלח מסמך</Text>
+                <Text style={styles.documentTitle}>שלח מסמך</Text>
+        </TouchableOpacity>
 
+        <TouchableOpacity onPress={onPress}>
             <Image source={receipt} style={styles.receiptIcon} />
-            <Text>קבלות</Text>
-            
+                <Text style={styles.receiptTitle}>קבלות</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={onPress}>
             <Image source={creditcard} style={styles.creditCardIcon} />
-            <Text>סליקה</Text>
+                <Text style={styles.creditCardTitle}>סליקה</Text>
+        </TouchableOpacity>
+
         </View>
 
 
@@ -122,10 +134,10 @@ export default function HomePage({text , onPress}) {
       },
       homeIcons: {
         backgroundColor:'white',
-        width:350,
-        height:75,
+        width:360,
+        height:80,
         top:20,
-        left:25,
+        left:17,
         borderRadius:17,
         shadowColor: 'rgba(169, 169, 169, 0.64)',
         shadowOpacity: 2,
@@ -134,10 +146,84 @@ export default function HomePage({text , onPress}) {
         width: 0.4
       }
       },
-      ratingIcon: {
-        width:40,
-        height:40,  
-        top:5,
-        marginLeft:270,
+      ratingIcon: {        
+        position:'absolute',
+        width:36,
+        height:33,  
+        marginLeft:300,
+        top:12,
+      },
+      youtubeIcon: {        
+        position:'absolute',
+        width:36,
+        height:33,  
+        marginLeft:238,
+        top:10,
+      },
+      sendDocumentIcon: {    
+        position:'absolute',
+        width:36,
+        height:33,  
+        marginLeft:160,
+        top:12,
+      },
+      receiptIcon: {
+        position:'absolute',
+        width:36,
+        height:33,  
+        marginLeft:82,
+        top:12,
+      },
+      creditCardIcon: {       
+        position:'absolute',
+        width:36,
+        height:33,  
+        marginLeft:15,
+        top:12,
+      },
+      ratingTitle: {   
+        position:'absolute',
+        fontSize:16,
+        textAlign:'center',
+        fontWeight:700,
+        color: '#6D6D6D',
+        marginTop:48,
+        marginLeft:292,
+      },
+      youtubeTitle: {   
+        position:'absolute',
+        fontSize:16,
+        textAlign:'center',
+        fontWeight:700,
+        color: '#6D6D6D',
+        marginTop:48,
+        marginLeft:232,
+      },
+      documentTitle: {   
+        position:'absolute',
+        fontSize:16,
+        textAlign:'center',
+        fontWeight:700,
+        color: '#6D6D6D',
+        marginTop:48,
+        marginLeft:142,
+      },
+      receiptTitle: {   
+        position:'absolute',
+        fontSize:16,
+        textAlign:'center',
+        fontWeight:700,
+        color: '#6D6D6D',
+        marginTop:48,
+        marginLeft:78,
+      },
+      creditCardTitle: {   
+        position:'absolute',
+        fontSize:16,
+        textAlign:'center',
+        fontWeight:700,
+        color: '#6D6D6D',
+        marginTop:48,
+        marginLeft:10,
       },
   });
