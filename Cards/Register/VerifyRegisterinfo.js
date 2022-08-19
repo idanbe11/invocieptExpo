@@ -41,6 +41,7 @@ export default function VerifyRegisterinfo({text , onPress}) {
       fontSize: 40,
       marginTop: 100,
       fontWeight: 'bold',
+      marginLeft:30,
     },
     VerifyEmailRegister: {
         position: 'absolute',
@@ -99,7 +100,7 @@ export default function VerifyRegisterinfo({text , onPress}) {
         width: 281,
         height: 52,
         left: 65,
-        top: 548,
+        top: 546,
         backgroundColor: '#7471F2',
         borderRadius:12,
       },

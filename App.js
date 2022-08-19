@@ -26,7 +26,7 @@ export default function App() {
           <ChooseAccount/>
             <ChooseBusiness/>
             <RegisterAsEmail/>*/}
-            <VerifyRegisterinfo/>
+            <VerifyRegisterinfo/> 
     </View>
      
   );
