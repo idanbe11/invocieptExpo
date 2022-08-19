@@ -13,6 +13,7 @@ import ForgetPassword from './Cards/Login/ForgetPassword';
 import ChooseAccount from './Cards/Register/ChooseAccount';
 import ChooseBusiness from './Cards/Register/ChooseBusiness';
 import RegisterAsEmail from './Cards/Register/RegisterAsEmail';
+import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
 
 export default function App() {
   return (
@@ -23,8 +24,9 @@ export default function App() {
      <LoginPage/>
      <ForgetPassword/> 
           <ChooseAccount/>
-            <ChooseBusiness/>*/}
-            <RegisterAsEmail/>
+            <ChooseBusiness/>
+            <RegisterAsEmail/>*/}
+            <VerifyRegisterinfo/>
     </View>
      
   );
