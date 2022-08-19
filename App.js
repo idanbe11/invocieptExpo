@@ -40,7 +40,7 @@ import HomePage from './Cards/Main/HomePage';
 export default () => {
   return(
     <NavigationContainer>
-      <App/>
+      <HomePage/>
     </NavigationContainer>
   )
 }
