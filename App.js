@@ -10,6 +10,7 @@ import LoadingPage from './Cards/Loading/LoadingPage';
 import LoginPage from './Cards/Login/LoginPage';
 import LoginSMS from './Cards/Login/LoginSMS';
 import ForgetPassword from './Cards/Login/ForgetPassword';
+import ChooseAccount from './Cards/Login/ChooseAccount';
 
 export default function App() {
   return (
@@ -17,8 +18,10 @@ export default function App() {
      {/*LoadingPage/> 
     
      <LoginSMS/>
-     <LoginPage/>*/} 
-     <ForgetPassword/>
+     <LoginPage/>
+     <ForgetPassword/>*/} 
+          <ChooseAccount/>
+
     </View>
      
   );
