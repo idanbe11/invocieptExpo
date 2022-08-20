@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Hamburger from 'hamburger-react'
 
-
 //icons
 import user from './Icons/user.png'; 
 import emoji from './Icons/smilingEmoji.png'; 
@@ -14,7 +13,6 @@ import sendDocument from './Icons/sendDocument.png';
 import youtube from './Icons/youtube.png'; 
 import rating from './Icons/rating.png'; 
 import receipt from './Icons/receipt.png'; 
-
 
 
 export default function HomePage({text , onPress}) { 
@@ -33,11 +31,6 @@ export default function HomePage({text , onPress}) {
         <Text style={styles.HomeTitle}>ברוכים הבאים , (שם המשתמש) 
         <Image source={emoji} style={styles.EmojiIcon} /> </Text>
         </View>
-
-
-
-
-
 
 
         <View>
@@ -87,42 +80,6 @@ export default function HomePage({text , onPress}) {
 
 
   const styles = StyleSheet.create({
-
-    wrapper: {},
-    slide1: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#9DD6EB'
-    },
-    slide2: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#97CAE5'
-    },
-    slide3: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#92BBD9'
-    },
-    text: {
-      color: '#fff',
-      fontSize: 30,
-      fontWeight: 'bold'
-    },
-
-    navigationSlider:{
-        width:"100%",
-        height:150,
-        shadowColor: '#ebebfa',
-        shadowOpacity: 50,
-        shadowOffset: {
-        height: 6,
-        width: 6,
-      }
-    },
     body: {
       width: 390,
       height: 844,
