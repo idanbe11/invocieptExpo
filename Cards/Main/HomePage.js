@@ -1,8 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput } from 'react-native';
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import Hamburger from 'hamburger-react'
+
 
 //icons
 import user from './Icons/user.png'; 
@@ -20,7 +21,7 @@ export default function HomePage({text , onPress}) {
   const handlePress= () => console.log("text pressed");
   const navigation = useNavigation();
   const [isOpen, setOpen] = useState(false)
-
+  const [value, setValue] = useState(0);
     return (
       <SafeAreaView style={styles.body}>
         <View style={styles.container}>
@@ -31,6 +32,20 @@ export default function HomePage({text , onPress}) {
         <Image source={bell} style={styles.bellIcon} /> 
         <Text style={styles.HomeTitle}>ברוכים הבאים , (שם המשתמש) 
         <Image source={emoji} style={styles.EmojiIcon} /> </Text>
+        </View>
+
+
+
+
+
+
+
+        <View>
+            <View style={styles.customerSlider}>
+                <Text>לקוחות שלי</Text>
+                <Text>16 מתוך 50</Text>
+                <View></View>
+            </View>
         </View>
 
         <View style={styles.homeIcons}>   
@@ -72,6 +87,42 @@ export default function HomePage({text , onPress}) {
 
 
   const styles = StyleSheet.create({
+
+    wrapper: {},
+    slide1: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#9DD6EB'
+    },
+    slide2: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#97CAE5'
+    },
+    slide3: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#92BBD9'
+    },
+    text: {
+      color: '#fff',
+      fontSize: 30,
+      fontWeight: 'bold'
+    },
+
+    navigationSlider:{
+        width:"100%",
+        height:150,
+        shadowColor: '#ebebfa',
+        shadowOpacity: 50,
+        shadowOffset: {
+        height: 6,
+        width: 6,
+      }
+    },
     body: {
       width: 390,
       height: 844,

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { Swiper as default } from \"./Swiper\";","map":{"version":3,"names":["Swiper","default"],"sources":["C:/Users/oplati/InvocieptExpo-1/node_modules/react-native-web-swiper/build/index.js"],"sourcesContent":["export{Swiper as default}from\"./Swiper\";"],"mappings":"AAAA,SAAOA,MAAM,IAAIC,OAAjB"},"metadata":{},"sourceType":"module"}
