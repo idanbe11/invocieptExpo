@@ -12,14 +12,13 @@ import bell from "./Icons/bell.png";
 
 
 
-
 export default function HomePage({ text, onPress }) {
   const handlePress = () => console.log("text pressed");
   const navigation = useNavigation();
   const [isOpen, setOpen] = useState(false);
   const [value, setValue] = useState(0);
   const { width, height } = Dimensions.get("window");
-  
+
   let arr = [
     {
       id: '1',
