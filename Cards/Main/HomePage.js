@@ -9,11 +9,7 @@ import {Card} from './Card';
 import user from "./Icons/user.png";
 import emoji from "./Icons/smilingEmoji.png";
 import bell from "./Icons/bell.png";
-import creditcard from "./Icons/creditcard.png";
-import sendDocument from "./Icons/sendDocument.png";
-import youtube from "./Icons/youtube.png";
-import rating from "./Icons/rating.png";
-import receipt from "./Icons/receipt.png";
+
 
 
 

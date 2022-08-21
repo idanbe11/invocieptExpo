@@ -1,12 +1,11 @@
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Dimensions,
-  Image,Item,
-} from "react-native";
+import {StyleSheet,Text,TouchableOpacity,View,Dimensions,Image,Item,} from "react-native";
 
+//icons
+import creditcard from "./Icons/creditcard.png";
+import sendDocument from "./Icons/sendDocument.png";
+import youtube from "./Icons/youtube.png";
+import rating from "./Icons/rating.png";
+import receipt from "./Icons/receipt.png";
 const { width, height } = Dimensions.get("window");
 
 export const Card = ({item}) => 
@@ -33,32 +32,7 @@ export const Card = ({item}) =>
           </View>
         </View>
         <View style={{ marginVertical: 13 }}>
-          <View style={styles.avatarsgroup}>
-            <Image
-              style={styles.avatar}
-              source={{
-                uri: "https://www.pngmart.com/files/22/User-Avatar-Profile-PNG-Isolated-Transparent-Picture.png",
-              }}
-            />
-            <Image
-              style={[styles.avatar, { zIndex: 5, marginLeft: -10 }]}
-              source={{
-                uri: "https://cdn-icons-png.flaticon.com/512/147/147144.png",
-              }}
-            />
-            <Image
-              style={[styles.avatar, { zIndex: 10, marginLeft: -10 }]}
-              source={{
-                uri: "https://www.pngall.com/wp-content/uploads/12/Avatar-Profile-Vector-PNG-Clipart.png",
-              }}
-            />
-            <Image
-              style={[styles.avatar, { zIndex: 15, marginLeft: -10 }]}
-              source={{
-                uri: "https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png",
-              }}
-            />
-          </View>
+       
         </View>
         <View>
           <Text style={styles.footertext}>8.7gb of 16gb used</Text>
