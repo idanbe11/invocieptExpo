@@ -35,17 +35,8 @@ export const Card = ({item}) =>
        
         </View>
         <View>
-          <Text style={styles.footertext}>8.7gb of 16gb used</Text>
-          <View style={styles.progressbar}>
-            <View
-              style={{
-                backgroundColor: "#73C2FB",
-                width: "60%",
-                height: "100%",
-                borderRadius: 20,
-              }}
-            />
-          </View>
+        <Image style={styles.image} source={item.img}/>
+          <Text style={styles.footertext}>{item.text}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -122,5 +113,12 @@ const styles = StyleSheet.create({
     backgroundColor: "#dadada",
     height: 10,
     marginTop: 12,
+  },
+  image:{
+    width: 65,
+    height: 63,
+    marginLeft:90,
+    top:-15,
+
   },
 });
