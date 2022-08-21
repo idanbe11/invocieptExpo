@@ -28,7 +28,7 @@ export default function HomePage({ text, onPress }) {
     },
     {
       id: '2',
-      title: ' הדרכה     ',
+      title: 'הדרכה     ',
       img: require("./Icons/youtube.png"),
     },
     {

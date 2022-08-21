@@ -36,7 +36,6 @@ export const Card = ({item}) =>
         </View>
         <View>
         <Image style={styles.image} source={item.img}/>
-          <Text style={styles.footertext}>{item.text}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -115,9 +114,9 @@ const styles = StyleSheet.create({
     marginTop: 12,
   },
   image:{
-    width: 65,
-    height: 63,
-    marginLeft:90,
+    width: 75,
+    height: 72,
+    marginLeft:84,
     top:-15,
 
   },
