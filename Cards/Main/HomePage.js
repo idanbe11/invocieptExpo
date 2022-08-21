@@ -1,9 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import {StyleSheet, Text,View,Image,SafeAreaView,Button,Alert,TouchableHighlight,TouchableWithoutFeedback,TouchableOpacity,TextInput,} from "react-native";
+import {StyleSheet, Text,View,Image,SafeAreaView,Button,Alert,TouchableHighlight,TouchableWithoutFeedback,TouchableOpacity,TextInput, Dimensions,  FlatList, } from "react-native";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import Hamburger from "hamburger-react";
 
+import {Card} from './Card';
 //icons
 import user from "./Icons/user.png";
 import emoji from "./Icons/smilingEmoji.png";
@@ -14,14 +15,41 @@ import youtube from "./Icons/youtube.png";
 import rating from "./Icons/rating.png";
 import receipt from "./Icons/receipt.png";
 
+
+
 export default function HomePage({ text, onPress }) {
   const handlePress = () => console.log("text pressed");
   const navigation = useNavigation();
   const [isOpen, setOpen] = useState(false);
   const [value, setValue] = useState(0);
+  const { width, height } = Dimensions.get("window");
+
+  let arr = [
+    {
+      id: '1',
+      title: 'לקוחות שלי',
+    },
+    {
+      id: '2',
+      title: ' הדרכה    ',
+    },
+    {
+      id: '3',
+      title: 'שלח מסמך',
+    },
+    {
+      id: '4',
+      title: 'קבלות    ',
+    },
+    {
+      id: '5',
+      title: 'סליקה    ',
+    },
+  
+  ];
   return (
     <SafeAreaView style={styles.body}>
-      <View style={styles.container}>
+      <View style={styles.TitleContainer}>
         <View style={styles.ProfileBackground}>
           <Image source={user} style={styles.ProfileIcon} />
         </View>
@@ -33,59 +61,50 @@ export default function HomePage({ text, onPress }) {
         </Text>
       </View>
 
-      <View>
-        <View style={styles.customerSlider}>
-          <Text>לקוחות שלי</Text>
-          <Text>16 מתוך 50</Text>
-          <View></View>
-        </View>
-      </View>
 
-      <View style={styles.homeIcons}>
-        <TouchableOpacity onPress={onPress}>
-          <Image source={rating} style={styles.ratingIcon} />
-          <Text style={styles.ratingTitle}>לקוחות</Text>
-        </TouchableOpacity>
+      <View style={styles.container}>
+      <StatusBar style="auto" />
+      {/* <Card /> */}
+      <FlatList
+        data={arr}
+        horizontal
+        contentContainerStyle={{
+          paddingLeft: 6,
+          paddingRight: 6,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => {
+          return <Card item={item} />;
+        }}
+      />
+    </View>
 
-        <TouchableOpacity onPress={onPress}>
-          <Image source={youtube} style={styles.youtubeIcon} />
-          <Text style={styles.youtubeTitle}>הדרכה</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={onPress}>
-          <Image source={sendDocument} style={styles.sendDocumentIcon} />
-          <Text style={styles.documentTitle}>שלח מסמך</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={onPress}>
-          <Image source={receipt} style={styles.receiptIcon} />
-          <Text style={styles.receiptTitle}>קבלות</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity onPress={onPress}>
-          <Image source={creditcard} style={styles.creditCardIcon} />
-          <Text style={styles.creditCardTitle}>סליקה</Text>
-        </TouchableOpacity>
-      </View>
     </SafeAreaView>
   );
 }
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({  
   body: {
     width: 390,
     height: 844,
     backgroundColor: "#f7f7fc",
   },
-  container: {
+  TitleContainer: {
     height: 260,
     borderRadius: 18,
-    shadowColor: "#ebebfa",
-    shadowOpacity: 50,
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 12,
+    backgroundColor: "#fff",  
+    shadowColor: "#a9a9a9",
+    borderRadius: 10,
     shadowOffset: {
-      height: 5.5,
-      width: 4,
-    },
+      width: 0,
+      height: 3,
+    }
   },
   backgroundImg: {
     width: "100%",
@@ -112,6 +131,76 @@ const styles = StyleSheet.create({
     top: -35,
     marginLeft: 270,
   },
+  container:{
+    top:10,
+  },
+  touchable: {
+    width: 260,
+    shadowColor: "#a9a9a9",
+    shadowOffset: {
+      width: 0,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    minHeight: 155,
+    elevation: 12,
+    marginHorizontal: 8,
+    backgroundColor: "#fff",
+    borderRadius: 10,
+  },
+
+  card: {
+    width: "100%",
+    paddingVertical: 15,
+    paddingHorizontal: 20,
+  },
+
+  cardheader: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "row",
+  },
+
+  cardheadertext: {
+    fontSize: 18,
+    fontWeight: "bold",
+    color: "black",
+    fontFamily: "sans-serif-light",
+  },
+
+  cardheadericon: {
+    width: 7,
+    padding: 2,
+    borderRadius: 50,
+    marginHorizontal: 3,
+  },
+  avatarsgroup: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  avatar: {
+    width: 32,
+    height: 32,
+    borderRadius: 50,
+    // marginHorizontal: 3,
+    borderWidth: 1,
+    borderColor: "pink",
+  },
+  footertext: {
+    color: "#dadada",
+    fontSize: 14,
+    fontWeight: "600",
+    letterSpacing: 0.2,
+  },
+  progressbar: {
+    width: "100%",
+    borderRadius: 20,
+    backgroundColor: "#dadada",
+    height: 10,
+    marginTop: 12,
+  },
   HomeTitle: {
     fontSize: 30,
     fontWeight: 700,
@@ -133,12 +222,17 @@ const styles = StyleSheet.create({
     top: 25,
     left: 17,
     borderRadius: 17,
-    shadowColor: "#ebebfa",
-    shadowOpacity: 50,
+    shadowColor: "#a9a9a9",
     shadowOffset: {
-      height: 6,
-      width: 6,
+      width: 0,
+      height: 3,
     },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 12,
+    marginHorizontal: 8,
+    backgroundColor: "#fff",
+    borderRadius: 10,
   },
   ratingIcon: {
     position: "absolute",
