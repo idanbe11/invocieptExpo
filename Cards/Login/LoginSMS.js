@@ -4,7 +4,8 @@ import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHigh
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import LoginBackground from './Icons/LoginBackground.jpg';
-
+import Google from './Icons/Google.png';
+import facebook from './Icons/facebook.png';
 export default function LoginSMS({text , onPress}) { 
   const handlePress= () => console.log("text pressed");
   const navigation = useNavigation();
@@ -18,25 +19,33 @@ export default function LoginSMS({text , onPress}) {
                     <Text style={styles.buttonTitle}>התחבר עם מייל</Text>
                   </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity>
                   <View style={styles.button2}>
                     <Text style={styles.buttonTitle}>התחבר עם SMS</Text>
                   </View>
                 </TouchableOpacity>
+
                 <TextInput style={styles.inputMail} value={text} keyboardType="numeric" placeholder="הזן מספר פלאפון"></TextInput>             
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonLogin}>
                     <Text style={styles.buttonLoginTitle}>כניסה</Text>
                   </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonGoogle}>
-                    <Text style={styles.buttonGoogleTitle}>התחבר באמצעות</Text>
+                    <Text style={styles.socialTitles}>התחבר באמצעות</Text>
+                    <Image source={Google} style={styles.socialIcons} />
+
                   </View>
                 </TouchableOpacity>
+
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonFacebook}>
-                    <Text style={styles.buttonFacebookTitle}>התחבר באמצעות</Text>
+                    <Text style={styles.socialTitles}>התחבר באמצעות</Text>
+                    <Image source={facebook} style={styles.socialIcons} />
+
                   </View>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('ChooseAccount')}>
@@ -150,12 +159,18 @@ export default function LoginSMS({text , onPress}) {
       },
       borderRadius: 12,
     },
-    buttonGoogleTitle: { 
+    socialTitles: { 
       fontWeight: 'bold',
       textAlign:'center',
       fontSize: 18,
-      marginTop: 9,
+      marginTop: 15,
       color:'black',
+    },
+    socialIcons:{
+      width:26,
+      height:26,
+      top:-25,
+      left:16,
     },
     buttonFacebook: { 
       position: 'absolute',
@@ -170,13 +185,6 @@ export default function LoginSMS({text , onPress}) {
         height: 1.8,
       },
       borderRadius: 12,
-    },
-    buttonFacebookTitle: { 
-      fontWeight: 'bold',
-      textAlign:'center',
-      fontSize: 18,
-      marginTop: 9,
-      color:'black',
     },
     buttonRegister: { 
       position: 'absolute',
