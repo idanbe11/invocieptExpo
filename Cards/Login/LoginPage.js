@@ -5,6 +5,8 @@ import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import LoginBackground from './Icons/LoginBackground.jpg';
+import Google from './Icons/Google.png';
+import facebook from './Icons/facebook.png';
 
 export default function LoginPage({text , onPress }) {  
   const handlePress= () => console.log("text pressed");
@@ -45,12 +47,16 @@ export default function LoginPage({text , onPress }) {
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonGoogle}>
                     <Text style={styles.buttonGoogleTitle}>התחבר באמצעות</Text>
+                    <Image source={Google} style={styles.socialIcons} />
+
                   </View>
                 </TouchableOpacity>
 
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.buttonFacebook}>
                     <Text style={styles.buttonFacebookTitle}>התחבר באמצעות</Text>
+                    <Image source={facebook} style={styles.socialIcons} />
+
                   </View>
                 </TouchableOpacity>
 
@@ -182,11 +188,17 @@ export default function LoginPage({text , onPress }) {
       },
       borderRadius: 12,
     },
+    socialIcons:{
+      width:26,
+      height:26,
+      top:-25,
+      left:16,
+    },
     buttonGoogleTitle: { 
       fontWeight: 'bold',
       textAlign:'center',
       fontSize: 18,
-      marginTop: 9,
+      marginTop: 15,
       color:'black',
     },
     buttonFacebook: { 
@@ -207,7 +219,7 @@ export default function LoginPage({text , onPress }) {
       fontWeight: 'bold',
       textAlign:'center',
       fontSize: 18,
-      marginTop: 9,
+      marginTop: 15,
       color:'black',
     },
     buttonRegister: { 
