@@ -19,7 +19,7 @@ export default function HomePage({ text, onPress }) {
   const [isOpen, setOpen] = useState(false);
   const [value, setValue] = useState(0);
   const { width, height } = Dimensions.get("window");
-
+  
   let arr = [
     {
       id: '1',
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     shadowColor: "#a9a9a9",
     borderRadius: 10,
     shadowOffset: {
-      width: 0,
+      width: 2,
       height: 3,
     }
   },
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     width: 260,
     shadowColor: "#a9a9a9",
     shadowOffset: {
-      width: 0,
+      width: 2,
       height: 3,
     },
     shadowOpacity: 0.27,
