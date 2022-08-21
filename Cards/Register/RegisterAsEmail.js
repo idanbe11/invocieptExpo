@@ -64,7 +64,7 @@ export default function ChooseAccount({text , onPress , route}) {
     body: {
         width: 390,
         height: 844,
-        backgroundColor: '#F8F8FF',
+        backgroundColor: 'white',
     },
     button:{
         position: 'absolute',
@@ -74,11 +74,12 @@ export default function ChooseAccount({text , onPress , route}) {
         top: 100,
         backgroundColor: 'white',
         borderRadius: 12,
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
+        shadowColor: "#a9a9a9",
+        borderRadius: 10,
         shadowOffset: {
-        height: 1.2,
-        width: 0.1
-      }
+          width: 1.4,
+          height: 2,
+        }
     },
     buttonTitle:{
         fontSize:22,
@@ -96,11 +97,12 @@ export default function ChooseAccount({text , onPress , route}) {
         top: 100,
         backgroundColor: '#7471F2',
         borderRadius: 12,
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
+        shadowColor: "#a9a9a9",
+        borderRadius: 10,
         shadowOffset: {
-        height: 1.2,
-        width: 0.1
-      }
+          width: 1.4,
+          height: 2,
+        }
     },
     buttonTitle2:{
         fontSize:22,
@@ -129,7 +131,7 @@ export default function ChooseAccount({text , onPress , route}) {
         height: 35,
         left: 55,
         top: 242,
-        backgroundColor:'#F8F8FF',
+        backgroundColor:'white',
         shadowColor: 'rgba(169, 169, 169, 0.64)',
         shadowOffset: {
         height: 1.4,
@@ -155,7 +157,7 @@ export default function ChooseAccount({text , onPress , route}) {
         height: 35,
         left: 135,
         top: 340,
-        backgroundColor:'#F8F8FF',
+        backgroundColor:'white',
         shadowColor: 'rgba(169, 169, 169, 0.64)',
         shadowOffset: {
         height: 1.4,
@@ -194,7 +196,7 @@ export default function ChooseAccount({text , onPress , route}) {
         height: 35,
         left: 55,
         top: 440,
-        backgroundColor:'#F8F8FF',
+        backgroundColor:'white',
         shadowColor: 'rgba(169, 169, 169, 0.64)',
         shadowOffset: {
         height: 1.4,
@@ -220,12 +222,12 @@ export default function ChooseAccount({text , onPress , route}) {
         height: 35,
         left: 55,
         top: 540,
-        backgroundColor:'#F8F8FF',
+        backgroundColor:'white',
         shadowColor: 'rgba(169, 169, 169, 0.64)',
-        shadowOffset: {
-        height: 1.4,
-        width: 0.1
-      }
+      shadowOffset: {
+      height: 1.4,
+      width: 0.1
+    }
       },
       buttonRegister:{
         position: 'absolute',

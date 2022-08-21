@@ -11,7 +11,6 @@ import emoji from "./Icons/smilingEmoji.png";
 import bell from "./Icons/bell.png";
 
 
-
 export default function HomePage({ text, onPress }) {
   const handlePress = () => console.log("text pressed");
   const navigation = useNavigation();

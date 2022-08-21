@@ -33,7 +33,7 @@ export default function VerifyRegisterinfo({text , onPress}) {
     body: {
       width: 390,
       height: 844,
-      backgroundColor: '#F8F8FF',
+      backgroundColor: 'white',
     },
     innerText: {
       textAlign:'center',
@@ -62,7 +62,7 @@ export default function VerifyRegisterinfo({text , onPress}) {
         height: 35,
         left: 55,
         top: 260,
-        backgroundColor:'#F8F8FF',
+        backgroundColor:'white',
         shadowColor: 'rgba(169, 169, 169, 0.64)',
         shadowOffset: {
         height: 1.4,
@@ -88,7 +88,7 @@ export default function VerifyRegisterinfo({text , onPress}) {
         height: 35,
         left: 55,
         top: 390,
-        backgroundColor:'#F8F8FF',
+        backgroundColor:'white',
         shadowColor: 'rgba(169, 169, 169, 0.64)',
         shadowOffset: {
         height: 1.4,

@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
 
+import Resetpassword from './Icons/Resetpassword.png';
 
 
 export default function ForgetPassword({text , onPress}) { 
   const handlePress= () => console.log("text pressed");
     return (
       <SafeAreaView style={styles.body}>
-                <Text style={styles.innerText}>שכחתי סיסמא</Text>
+          <Image source={Resetpassword} style={styles.LoginBackground} />
+
                 
                 <TextInput style={styles.inputMail} value={text} keyboardType="numeric" placeholder="הזן מייל"></TextInput>             
                 <TouchableOpacity onPress={onPress}>
@@ -24,18 +26,16 @@ export default function ForgetPassword({text , onPress}) {
 
 
   const styles = StyleSheet.create({
+    LoginBackground:{
+      width:'100%',
+      height:340, 
+    },
     body: {
       width: 390,
       height: 844,
-      backgroundColor: '#F8F8FF',
+      backgroundColor: 'white',
     },
-    innerText: {
-      textAlign:'center',
-      color: 'black',
-      fontSize: 40,
-      marginTop: 100,
-      fontWeight: 'bold',
-    },
+ 
     inputMail:{
       fontSize: 18,
       textAlign: 'right',
@@ -43,8 +43,8 @@ export default function ForgetPassword({text , onPress}) {
       width: 303,
       height: 35,
       left: 55,
-      top: 300,
-      backgroundColor:'#F8F8FF',
+      top: 410,
+      backgroundColor: 'white',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
       height: 1.4,
@@ -59,7 +59,7 @@ export default function ForgetPassword({text , onPress}) {
       width:281,
       height: 52,
       left: 61.5,
-      top: 360,
+      top: 250,
       fontWeight: 'bold',
       textAlign:'center',
       shadowColor: 'lightgray',

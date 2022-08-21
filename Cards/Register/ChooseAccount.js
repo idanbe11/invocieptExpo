@@ -33,7 +33,7 @@ export default function ChooseAccount({text , onPress}) {
     body: {
       width: 390,
       height: 844,
-      backgroundColor: '#F8F8FF',
+      backgroundColor: 'white',
     },
     innerText: {
       textAlign:'center',
@@ -49,11 +49,12 @@ export default function ChooseAccount({text , onPress}) {
         left: 47,
         top: 300,
         backgroundColor:'#7471F2',
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
+        shadowColor: "#a9a9a9",
+        borderRadius: 10,
         shadowOffset: {
-            height: 1.5,
-            width: 0.5,
-    }
+          width: 2,
+          height: 2,
+        }
     },
     CpaTitle:{
         fontWeight: 'bold',
@@ -70,9 +71,11 @@ export default function ChooseAccount({text , onPress}) {
         left: 47,
         top: 150,
         backgroundColor:'#7471F2',
+        shadowColor: "#a9a9a9",
+        borderRadius: 10,
         shadowOffset: {
-            height: 1.5,
-            width: 0.5,
+          width: 2,
+          height: 2,
         }
     },
     BusinessTitle:{

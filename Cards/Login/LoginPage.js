@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHigh
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 
+import LoginBackground from './Icons/LoginBackground.jpg';
 
 export default function LoginPage({text , onPress }) {  
   const handlePress= () => console.log("text pressed");
@@ -12,8 +13,8 @@ export default function LoginPage({text , onPress }) {
     return (
       <SafeAreaView style={styles.body}>
   
+  <Image source={LoginBackground} style={styles.LoginBackground} />
 
-                <Text style={styles.innerText}>התחברות</Text>
                 <TouchableOpacity onPress={onPress}>
                   <View style={styles.button}>
                     <Text style={styles.buttonTitle}>התחבר עם מייל</Text>
@@ -66,36 +67,35 @@ export default function LoginPage({text , onPress }) {
 
 
   const styles = StyleSheet.create({
+    LoginBackground:{
+      width:'100%',
+      height:230, 
+    },
     body: {
       width: 390,
       height: 844,
-      backgroundColor: '#F8F8FF',
+      backgroundColor: 'white',
   
-    },
-    innerText: {
-      textAlign:'center',
-      color: 'black',
-      fontSize: 40,
-      marginTop: 100,
-      fontWeight: 'bold',
     },
     button: { 
       position:'absolute',
-      backgroundColor: '#F8F8FF',
-      padding: 20,
-      borderRadius: 5,
-      width:165,
+      backgroundColor: 'white',
+      padding: 15,
+      width:160,
       left: 195,
-      top: 40,
+      top: -6,
+      borderRadius: 10,
+
     },
     button2: { 
       position:'absolute',
-      backgroundColor: '#F8F8FF',
-      padding: 20,
-      borderRadius: 5,
-      width:165,
+      backgroundColor: 'white',
+      padding: 15,
+      borderRadius: 10,
+      width:160,
       left: 5,
-      top: 40,
+      top: -6,
+  
     },
     buttonTitle: {
       color:'black',
@@ -112,7 +112,7 @@ export default function LoginPage({text , onPress }) {
       height: 35,
       left: 55,
       top: 300,
-      backgroundColor:'#F8F8FF',
+      backgroundColor: 'white',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
       height: 1.4,
@@ -127,7 +127,7 @@ export default function LoginPage({text , onPress }) {
       height: 35,
       left: 55,
       top: 380,
-      backgroundColor:'#F8F8FF',
+      backgroundColor: 'white',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
       height: 1.4,
@@ -136,12 +136,12 @@ export default function LoginPage({text , onPress }) {
     },
     buttonForget: { 
       position:'absolute',
-      backgroundColor: '#F8F8FF',
+      backgroundColor: 'white',
       padding: 20,
       borderRadius: 5,
       width:165,
       left: 195,
-      top: 280,
+      top: 195,
     },
     buttonLogin: { 
       position:'absolute',
@@ -151,14 +151,15 @@ export default function LoginPage({text , onPress }) {
       width:281,
       height: 52,
       left: 61.5,
-      top: 360,
+      top: 265,
       fontWeight: 'bold',
       textAlign:'center',
-      shadowColor: 'lightgray',
+      shadowColor: "#a9a9a9",
+      borderRadius: 10,
       shadowOffset: {
-      height: 1,
-      width: 0.5
-    }
+        width: 1,
+        height: 1.8,
+      }
     },
     buttonLoginTitle: { 
       fontWeight: 'bold',
@@ -172,11 +173,12 @@ export default function LoginPage({text , onPress }) {
       width: 253,
       height: 52,
       left: 74,
-      top: 460,
-      backgroundColor: '#FFFFFF',
+      top: 350,
+      shadowColor: "#a9a9a9",
+      borderRadius: 10,
       shadowOffset: {
-      height: 1,
-      width: 0.5
+        width: 1,
+        height: 1.8,
       },
       borderRadius: 12,
     },
@@ -192,11 +194,12 @@ export default function LoginPage({text , onPress }) {
       width: 253,
       height: 52,
       left: 74,
-      top: 550,
-      backgroundColor: '#FFFFFF',
+      top: 430,
+      shadowColor: "#a9a9a9",
+      borderRadius: 10,
       shadowOffset: {
-      height: 1,
-      width: 0.5
+        width: 1,
+        height: 1.8,
       },
       borderRadius: 12,
     },
@@ -212,7 +215,7 @@ export default function LoginPage({text , onPress }) {
       width: '100%',
       height: 60,
       left: 0.2,
-      top: 635,
+      top: 555,
       backgroundColor: '#7471F2',
     },
     buttonRegisterTitle: { 
