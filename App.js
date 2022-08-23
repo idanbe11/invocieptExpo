@@ -17,6 +17,7 @@ import RegisterAsEmail from './Cards/Register/RegisterAsEmail';
 import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
 import HomePage from './Cards/Main/HomePage';
 import ClearingPage from './Cards/Main/ClearingPage';
+import GettingStart from './Cards/Loading/gettingStart';
 
 
  function App() {
@@ -24,6 +25,7 @@ import ClearingPage from './Cards/Main/ClearingPage';
 
   return (
     <Stack.Navigator>
+      <Stack.Screen name="GettingStart" component={GettingStart}/>
       <Stack.Screen name="LoginPage" component={LoginPage}/>
       <Stack.Screen name="LoginSMS" component={LoginSMS}/>
       <Stack.Screen name="ForgetPassword" component={ForgetPassword}/>
@@ -32,6 +34,7 @@ import ClearingPage from './Cards/Main/ClearingPage';
         <Stack.Screen name="ChooseBusiness" component={ChooseBusiness}/>
           <Stack.Screen name="RegisterAsEmail" component={RegisterAsEmail}/>
             <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
+
       <Stack.Screen name="HomePage" component={HomePage}/>
         <Stack.Screen name="ClearingPage" component={ClearingPage}/>
 
@@ -42,7 +45,7 @@ import ClearingPage from './Cards/Main/ClearingPage';
 export default () => {
   return(
     <NavigationContainer>
-      <ClearingPage/>
+      <GettingStart/>
     </NavigationContainer>
   )
 }
