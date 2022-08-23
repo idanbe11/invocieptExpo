@@ -16,6 +16,7 @@ import ChooseBusiness from './Cards/Register/ChooseBusiness';
 import RegisterAsEmail from './Cards/Register/RegisterAsEmail';
 import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
 import HomePage from './Cards/Main/HomePage';
+import ClearingPage from './Cards/Main/ClearingPage';
 
 
  function App() {
@@ -32,6 +33,7 @@ import HomePage from './Cards/Main/HomePage';
           <Stack.Screen name="RegisterAsEmail" component={RegisterAsEmail}/>
             <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
       <Stack.Screen name="HomePage" component={HomePage}/>
+        <Stack.Screen name="ClearingPage" component={ClearingPage}/>
 
   </Stack.Navigator> 
      
@@ -40,7 +42,7 @@ import HomePage from './Cards/Main/HomePage';
 export default () => {
   return(
     <NavigationContainer>
-      <HomePage/>
+      <ClearingPage/>
     </NavigationContainer>
   )
 }
