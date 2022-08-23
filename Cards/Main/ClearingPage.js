@@ -1,15 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput,Dimensions,  FlatList, } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
 
 import Clearing from './Icons/Clearing.png';
 
 
 export default function ClearingPage({text , onPress}) { 
-
     return (
       <SafeAreaView style={styles.body}>
         <Image source={Clearing} style={styles.ClearingBackground} />
-       
             <View style={styles.container}>
                 <View style={styles.subContainer}>
                     <Text>{item.title}</Text>
@@ -20,8 +18,6 @@ export default function ClearingPage({text , onPress}) {
       </SafeAreaView>
     );
   }
-
-
 
   const styles = StyleSheet.create({
     ClearingBackground:{
