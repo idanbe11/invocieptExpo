@@ -45,7 +45,7 @@ import GettingStart from './Cards/Loading/gettingStart';
 export default () => {
   return(
     <NavigationContainer>
-      <GettingStart/>
+      <HomePage/>
     </NavigationContainer>
   )
 }
