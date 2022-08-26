@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import Hamburger from "hamburger-react";
 
-import {DragDrop} from './DragDrop';
 import {Card} from './Card';
 //icons
 import user from "./Icons/user.png";
@@ -82,7 +81,6 @@ export default function HomePage({ text, onPress }) {
         }}
       />
     </View>
-      <DragDrop/>
     </SafeAreaView>
   );
 }
