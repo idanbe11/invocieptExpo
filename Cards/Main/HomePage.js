@@ -2,9 +2,10 @@ import { StatusBar } from "expo-status-bar";
 import {StyleSheet, Text,View,Image,SafeAreaView,Button,Alert,TouchableHighlight,TouchableWithoutFeedback,TouchableOpacity,TextInput, Dimensions,  FlatList, } from "react-native";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import Hamburger from "hamburger-react";
 
 import {Card} from './Card';
+import {DragDrop} from './DragDrop';
+
 //icons
 import user from "./Icons/user.png";
 import emoji from "./Icons/smilingEmoji.png";
@@ -53,7 +54,6 @@ export default function HomePage({ text, onPress }) {
         <View style={styles.ProfileBackground}>
           <Image source={user} style={styles.ProfileIcon} />
         </View>
-        <Hamburger toggled={isOpen} toggle={setOpen} />
         <Image source={bell} style={styles.bellIcon} />
         <Text style={styles.HomeTitle}>
           ברוכים הבאים , (שם המשתמש)
@@ -80,6 +80,7 @@ export default function HomePage({ text, onPress }) {
           return <Card item={item} />;
         }}
       />
+      <DragDrop/>
     </View>
     </SafeAreaView>
   );
@@ -132,7 +133,6 @@ const styles = StyleSheet.create({
   },
   HomeTitle: {
     fontSize: 30,
-    fontWeight: 700,
     width: 270,
     marginTop: 15,
     marginLeft: 100,
@@ -169,7 +169,6 @@ const styles = StyleSheet.create({
 
   cardheadertext: {
     fontSize: 18,
-    fontWeight: "bold",
     color: "black",
     fontFamily: "sans-serif-light",
   },
@@ -196,7 +195,6 @@ const styles = StyleSheet.create({
   footertext: {
     color: "#dadada",
     fontSize: 14,
-    fontWeight: "600",
     letterSpacing: 0.2,
   },
   progressbar: {

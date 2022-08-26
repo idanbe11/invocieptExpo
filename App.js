@@ -5,7 +5,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 // Cards componets
       // Loading
-import LoadingPage from './Cards/Loading/LoadingPage';
  
       // Login
 import LoginPage from './Cards/Login/LoginPage';
@@ -18,6 +17,7 @@ import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
 import HomePage from './Cards/Main/HomePage';
 import ClearingPage from './Cards/Main/ClearingPage';
 import GettingStart from './Cards/Loading/gettingStart';
+import DragDrop from './Cards/Main/DragDrop';
 
 
  function App() {
@@ -37,6 +37,7 @@ import GettingStart from './Cards/Loading/gettingStart';
 
       <Stack.Screen name="HomePage" component={HomePage}/>
         <Stack.Screen name="ClearingPage" component={ClearingPage}/>
+        <Stack.Screen name="DragDrop" component={DragDrop}/>
 
   </Stack.Navigator> 
      
@@ -45,7 +46,7 @@ import GettingStart from './Cards/Loading/gettingStart';
 export default () => {
   return(
     <NavigationContainer>
-      <GettingStart/>
+      <HomePage/>
     </NavigationContainer>
   )
 }
