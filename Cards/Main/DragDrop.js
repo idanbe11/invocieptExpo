@@ -23,12 +23,12 @@ const { width } = Dimensions.get("window");
 const list = [
   {
     id: "one",
-    cardname: "first card",
+    cardname: "הכנסות",
    
   },
   {
     id: "two",
-    cardname: "second card ",
+    cardname: "הוצאות ",
   },
   {
     id: "three",
@@ -87,14 +87,14 @@ export function DragDrop() {
               }}
             >
               <View>
-                <Text style={styles.secondcontainertext}>Some text is</Text>
-                <Text style={[styles.moneytext, { color: "#9c9c9c" }]}>
+                <Text style={styles.secondcontainertext}>הכנסות חודש שעבר</Text>
+                <Text style={[styles.moneyPassM, { color: "#9c9c9c" }]}>
                   11,999.99
                 </Text>
               </View>
               <View>
-                <Text style={styles.secondcontainertext}>Some text</Text>
-                <Text style={[styles.moneytext, { color: "purple" }]}>
+                <Text style={styles.secondcontainertext}>הכנסות חודשיות</Text>
+                <Text style={[styles.moneyThisM, { color: "purple" }]}>
                   9,324.99
                 </Text>
               </View>
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
     elevation: 10,
     shadowColor: "#c0c0c0",
     paddingHorizontal: 12,
-    marginTop:50,
+    marginTop:45,
 
   },
   firsttext: {
@@ -170,10 +170,16 @@ const styles = StyleSheet.create({
     color: "#9c9c9c",
     padding: 2,
   },
-  moneytext: {
-    fontSize: 24,
+  moneyPassM: {
+    fontSize: 22,
     fontWeight: "900",
-    padding: 2,
+    padding: 1,
+  },
+  moneyThisM: {
+    fontSize: 22,
+    fontWeight: "900",
+    padding: 1,
+    left:28,
   },
   progressbarcontainer: {
     width: "100%",

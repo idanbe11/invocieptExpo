@@ -45,7 +45,7 @@ export const Card = ({item}) =>
 };
 const styles = StyleSheet.create({
   touchable: {
-    width: 260,
+    width: 250,
     shadowColor: "#a9a9a9",
     shadowOffset: {
       width: 2,
@@ -53,7 +53,6 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
-    minHeight: 155,
     elevation: 12,
     marginHorizontal: 8,
     backgroundColor: "#fff",
@@ -106,17 +105,10 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     letterSpacing: 0.2,
   },
-  progressbar: {
-    width: "100%",
-    borderRadius: 20,
-    backgroundColor: "#dadada",
-    height: 10,
-    marginTop: 12,
-  },
   image:{
     width: 75,
     height: 72,
-    marginLeft:84,
+    marginLeft:83,
     top:-15,
 
   },
