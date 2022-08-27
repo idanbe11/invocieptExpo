@@ -1,16 +1,6 @@
 import React, { useState } from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
-  TouchableOpacity,
-  UIManager,
-  Dimensions,
-} from "react-native";
-import DraggableFlatList, {
-  ScaleDecorator,
-  RenderItemParams,
-} from "react-native-draggable-flatlist";
+import {Text,View,StyleSheet,TouchableOpacity,UIManager,Dimensions,} from "react-native";
+import DraggableFlatList, { ScaleDecorator,RenderItemParams,} from "react-native-draggable-flatlist";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { PieChart } from "react-native-gifted-charts";
@@ -22,7 +12,7 @@ const data = [
 
 const DonutChart = () => {
   return (
-    <View style={{ marginTop: 30, marginLeft: 5 }}>
+    <View style={{ marginTop: 30, marginLeft: 35 }}>
       <PieChart data={data} donut radius={40} innerRadius={20} />
     </View>
   );
@@ -34,6 +24,7 @@ const list = [
   {
     id: "one",
     cardname: "first card",
+   
   },
   {
     id: "two",
@@ -69,15 +60,7 @@ export function DragDrop() {
     return (
       <ScaleDecorator>
         <View>
-          <TouchableOpacity
-            activeOpacity={1}
-            onLongPress={drag}
-            disabled={isActive}
-            style={[
-              styles.card,
-              { backgroundColor: isActive ? "pink" : item.backgroundColor },
-            ]}
-          >
+          <TouchableOpacity activeOpacity={1} onLongPress={drag} disabled={isActive} style={[ styles.card, { backgroundColor: isActive ? "pink" : item.backgroundColor },]}>
             <View
               style={{
                 width: "100%",
@@ -128,7 +111,7 @@ export function DragDrop() {
   };
 
   return (
-    <GestureHandlerRootView style={{ flex: 1, backgroundColor: "seashell" }}>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: "#f7f7fc" }}>
       <SafeAreaProvider>
         <DraggableFlatList
           data={data}
@@ -150,24 +133,27 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontSize: 24,
-    fontWeight: "bold",
+    fontSize: 22,
+    fontWeight: "900",
     textAlign: "center",
   },
   scrollview: {
     flex: 1,
     backgroundColor: "#fff",
     position: "relative",
+    
   },
   card: {
     marginHorizontal: "auto",
     width: width / 1.05,
     borderRadius: 12,
-    backgroundColor: "#fff",
-    minHeight: 250,
+    backgroundColor: "white",
+    minHeight: 150,
     elevation: 10,
     shadowColor: "#c0c0c0",
     paddingHorizontal: 12,
+    marginTop:50,
+
   },
   firsttext: {
     alignSelf: "flex-end",
@@ -175,18 +161,18 @@ const styles = StyleSheet.create({
     paddingBottom: 10,
     paddingHorizontal: 15,
     fontSize: 20,
-    fontWeight: "bold",
+    fontWeight: "900",
     margin: 2,
   },
   secondcontainertext: {
     fontSize: 17,
-    fontWeight: "medium",
+    fontWeight: "500",
     color: "#9c9c9c",
     padding: 2,
   },
   moneytext: {
     fontSize: 24,
-    fontWeight: "bold",
+    fontWeight: "900",
     padding: 2,
   },
   progressbarcontainer: {
