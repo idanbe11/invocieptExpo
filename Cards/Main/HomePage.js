@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#f7f7fc",
   },
   TitleContainer: {
-    height: 210,
+    height: 205,
     borderRadius: 18,
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
@@ -124,11 +124,10 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     top: 10,
   },
-  bellBackground: {},
   bellIcon: {
     width: 23,
     height: 27,
-    top: -35,
+    top: 10,
     marginLeft: 270,
   },
   HomeTitle: {
@@ -138,72 +137,9 @@ const styles = StyleSheet.create({
     marginLeft: 115,
   },
   container:{
-    top:15,
+    marginVertical:10,
   },
-  touchable: {
-    width: 260,
-    shadowColor: "#a9a9a9",
-    shadowOffset: {
-      width: 2,
-      height: 3,
-    },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-    minHeight: 155,
-    elevation: 12,
-    marginHorizontal: 8,
-    backgroundColor: "#fff",
-    borderRadius: 10,
-  },
-  card: {
-    width: "100%",
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-  },
-
-  cardheader: {
-    display: "flex",
-    justifyContent: "space-between",
-    flexDirection: "row",
-  },
-
-  cardheadertext: {
-    fontSize: 18,
-    color: "black",
-    fontFamily: "sans-serif-light",
-  },
-
-  cardheadericon: {
-    width: 7,
-    padding: 2,
-    borderRadius: 50,
-    marginHorizontal: 3,
-  },
-  avatarsgroup: {
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  avatar: {
-    width: 32,
-    height: 32,
-    borderRadius: 50,
-    // marginHorizontal: 3,
-    borderWidth: 1,
-    borderColor: "pink",
-  },
-  footertext: {
-    color: "#dadada",
-    fontSize: 14,
-    letterSpacing: 0.2,
-  },
-  progressbar: {
-    width: "100%",
-    borderRadius: 20,
-    backgroundColor: "#dadada",
-    height: 10,
-    marginTop: 12,
-  },
+ 
   EmojiIcon: {
     backgroundColor: "white",
     width: 35,

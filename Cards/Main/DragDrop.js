@@ -20,6 +20,7 @@ const DonutChart = () => {
 
 const { width } = Dimensions.get("window");
 
+
 const list = [
   {
     id: "one",
@@ -29,24 +30,9 @@ const list = [
   {
     id: "two",
     cardname: "הוצאות ",
-  },
-  {
-    id: "three",
-    cardname: "third card",
-  },
-  {
-    id: "four",
-    cardname: "fourth card",
-  },
-  {
-    id: "five",
-    cardname: "five card",
-  },
-  {
-    id: "six",
-    cardname: "six card",
-  },
+  }
 ];
+
 
 if (Platform.OS === "android") {
   UIManager.setLayoutAnimationEnabledExperimental &&
@@ -58,9 +44,9 @@ export function DragDrop() {
 
   const renderItem = ({ item, drag, isActive }) => {
     return (
-      <ScaleDecorator>
+      <ScaleDecorator style={styles.body}>
         <View>
-          <TouchableOpacity activeOpacity={1} onLongPress={drag} disabled={isActive} style={[ styles.card, { backgroundColor: isActive ? "pink" : item.backgroundColor },]}>
+          <TouchableOpacity activeOpacity={1} onLongPress={drag} disabled={isActive} style={[ styles.card, { backgroundColor: isActive ? "#f7f7fc" : item.backgroundColor },]}>
             <View
               style={{
                 width: "100%",
@@ -126,6 +112,9 @@ export function DragDrop() {
 }
 
 const styles = StyleSheet.create({
+  body: {
+    backgroundColor: "#f7f7fc",
+  },
   rowItem: {
     height: 100,
     alignItems: "center",
@@ -147,12 +136,12 @@ const styles = StyleSheet.create({
     marginHorizontal: "auto",
     width: width / 1.05,
     borderRadius: 12,
-    backgroundColor: "white",
-    minHeight: 150,
+    backgroundColor: 'white',
+    height: 220,
     elevation: 10,
     shadowColor: "#c0c0c0",
     paddingHorizontal: 12,
-    marginTop:45,
+    marginVertical: -8,
 
   },
   firsttext: {
@@ -191,6 +180,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: "100%",
     height: 12,
+    marginVertical:-10,
   },
   progress: {
     width: "60%",

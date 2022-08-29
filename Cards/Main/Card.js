@@ -45,7 +45,7 @@ export const Card = ({item}) =>
 };
 const styles = StyleSheet.create({
   touchable: {
-    width: 250,
+    width: 220,
     shadowColor: "#a9a9a9",
     shadowOffset: {
       width: 2,
@@ -56,13 +56,15 @@ const styles = StyleSheet.create({
     elevation: 12,
     marginHorizontal: 8,
     backgroundColor: "#fff",
-    borderRadius: 10,
+    borderRadius: 10,    
+
   },
 
   card: {
     width: "100%",
-    paddingVertical: 15,
-    paddingHorizontal: 20,
+    paddingVertical: 5,
+    paddingHorizontal: 10,
+    
   },
 
   cardheader: {
@@ -72,7 +74,7 @@ const styles = StyleSheet.create({
   },
 
   cardheadertext: {
-    fontSize: 22,
+    fontSize: 20,
     fontWeight: "bold",
     color: "black",
     textAlign:"center",
@@ -106,9 +108,9 @@ const styles = StyleSheet.create({
     letterSpacing: 0.2,
   },
   image:{
-    width: 75,
-    height: 72,
-    marginLeft:83,
+    width: 60,
+    height: 59,
+    marginLeft:80,
     top:-15,
 
   },
