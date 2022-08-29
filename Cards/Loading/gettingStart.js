@@ -9,8 +9,11 @@ export default function gettingStart({text , onPress }) {
       <SafeAreaView style={styles.body}>
         <Image source={GettingStart} style={styles.ClearingBackground} />
             <View style={styles.container}>
+              <TouchableOpacity style={styles.havingAccount}>
+                <Text style={styles.havingAccountTitle}>משתמש קיים?</Text>
+              </TouchableOpacity>
                 <Text style={styles.Title}>נהל את העסק <Text style={styles.TitleColor}>בלחיצה </Text></Text>
-                <Text style={styles.SubTitle}>מעכשיו ניהול העסק וההוצאות שלך <br></br>קלה יותר בזכות האפליקציה שלנו <br></br> הירשמו עכשיו למגוון אפשרויות מיוחדות</Text>
+                <Text style={styles.SubTitle}>מעכשיו ניהול העסק וההוצאות שלך קלה יותר בזכות האפליקציה שלנו  הירשמו עכשיו למגוון אפשרויות מיוחדות</Text>
 
                 <TouchableOpacity onPress={() => navigation.navigate('ChooseAccount')}>
                   <View style={styles.StartButton}>
@@ -27,6 +30,22 @@ export default function gettingStart({text , onPress }) {
     ClearingBackground:{
       width:'100%',
       height:310,
+      
+    },
+    havingAccount:{
+      position:'absolute',
+      backgroundColor:'#7471F2',
+      width: '32%',
+      height: 33,
+      borderRadius:16,
+      marginLeft:250,
+      marginTop:15,
+    },
+    havingAccountTitle:{
+      color:'white',
+      fontSize: 17,
+      textAlign:'center',
+      top:2,
     },
     body: {
       width: 390,
@@ -41,16 +60,15 @@ export default function gettingStart({text , onPress }) {
     }, 
     Title: {
         fontSize:28,
-        fontWeight:700,
         textAlign:'center',
-        marginTop:20,
+        marginTop:55,
     },
     TitleColor: {
         color: '#7471F2',
     },
     SubTitle: {
         fontSize:20,
-        marginTop:30,
+        marginTop:20,
         color: '#626263',  
         textAlign:'center',
         width:'95%',
@@ -61,12 +79,11 @@ export default function gettingStart({text , onPress }) {
       width: '85%',
       height: 60,
       left: 35,
-      top: 255,
+      top: 180,
       backgroundColor: '#7471F2',
       borderRadius:16,     
     },
     StartButtonTitle: { 
-      fontWeight: 'bold',
       textAlign:'center',
       fontSize: 24,
       marginTop: 10,
