@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#f7f7fc",
   },
   TitleContainer: {
-    height: 205,
+    height: 210,
     borderRadius: 18,
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
@@ -132,9 +132,10 @@ const styles = StyleSheet.create({
   },
   HomeTitle: {
     fontSize: 26,
-    width: 250,
-    marginTop: 20,
-    marginLeft: 115,
+    width: 210,
+    marginTop: 25,
+    marginLeft: 155,
+    textAlign:"right",
   },
   container:{
     marginVertical:10,
