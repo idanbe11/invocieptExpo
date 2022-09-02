@@ -23,6 +23,7 @@ export default function Affiliate({text , onPress }) {
        
         <Text style={styles.socialTitle}>שתפו ברשת החברתית - </Text>
 
+    <View style={styles.row}>
         <TouchableOpacity onPress={onPress}>
         <Image source={facebook} style={styles.socialIcons} />
         </TouchableOpacity> 
@@ -34,7 +35,7 @@ export default function Affiliate({text , onPress }) {
         <TouchableOpacity onPress={onPress}>
         <Image source={linkedin} style={styles.socialIcons} />
         </TouchableOpacity>
-       
+    </View>
        <Text style={styles.text1}>לרשותך 20% עמלה שמתחלק בינך לבין הלקוח
             החלוקה היא 10% עמלה לך ו 10% הנחה ללקוחות שמגיעים דרכך.
        </Text>
@@ -110,27 +111,31 @@ export default function Affiliate({text , onPress }) {
     fontSize: 20,
     textAlign: 'right',
     fontWeight:'bold',
-    top:95,
+    top:95,  
   },
   socialIcons:{
     width:30,
     height:30,
-    marginBottom: 15,
-    
+    marginTop:65,
+    marginRight:200,
   },
-
+  row:{
+    flexDirection: 'row',  
+    justifyContent: 'space-evenly',
+    paddingHorizontal: 190,
+    },
   text1:{
     fontSize: 15,
     textAlign: 'right',
     fontWeight:'bold',
-    top:28,
+    top:30,
   },
   codeBoard:{
    width:160,
    height:55,
    backgroundColor:'#7471F2',
    borderRadius:16,
-   top:75,
+   top:65,
    left:210,
   },
   codeBoardCopy:{
@@ -144,7 +149,7 @@ export default function Affiliate({text , onPress }) {
     color:'black',
     fontWeight:'bold',
     fontSize:17,
-    top:63,
+    top:55,
     right:62,
    },
   clickedBoard:{
@@ -153,7 +158,7 @@ export default function Affiliate({text , onPress }) {
     backgroundColor:'#7471F2',
     borderRadius:16,
     left:20,  
-    top:-3,
+    top:-13,
    },
    clicked:{
      color:'white',
@@ -167,6 +172,6 @@ export default function Affiliate({text , onPress }) {
         fontWeight:'bold',
         fontSize:17,
         right:204,
-        top:-15,
-       },
+        top:-22,
+    },
   });
