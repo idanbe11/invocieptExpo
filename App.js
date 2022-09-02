@@ -19,6 +19,7 @@ import HomePage from './Cards/Main/HomePage';
 import ClearingPage from './Cards/Main/ClearingPage';
 import GettingStart from './Cards/Loading/gettingStart';
 import DragDrop from './Cards/Main/DragDrop';
+import Affiliate from './Cards/Main/Pages/Affiliate';
 
 
  function App() {
@@ -40,6 +41,7 @@ import DragDrop from './Cards/Main/DragDrop';
       <Stack.Screen name="HomePage" component={HomePage}/>
         <Stack.Screen name="ClearingPage" component={ClearingPage}/>
         <Stack.Screen name="DragDrop" component={DragDrop}/>
+          <Stack.Screen name="Affiliate" component={Affiliate}/>
 
   </Stack.Navigator> 
      
@@ -48,7 +50,7 @@ import DragDrop from './Cards/Main/DragDrop';
 export default () => {
   return(
     <NavigationContainer>
-      <HomePage/>
+      <Affiliate/>
     </NavigationContainer>
   )
 }
