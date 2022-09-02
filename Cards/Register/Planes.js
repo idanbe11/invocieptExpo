@@ -61,10 +61,8 @@ export default function Planes({ text, onPress , item}) {
       text9: "מחיר מיוחד לאתר",
     },
   ];
- 
-  return (
-    
-    <FlatList 
+  return ( 
+    <FlatList
     data={arr}
     horizontal
     contentContainerStyle={{
@@ -115,6 +113,14 @@ export const Card = ({item}) =>
               <Text style={styles.cardtext}>{item.text8}</Text>
               <Text style={styles.cardtext}>{item.text9}</Text>
         </View>
+
+        <TouchableOpacity>
+           <View style={styles.button}>
+              <Text style={styles.buttonTitle}>בחר</Text>
+            </View>
+        </TouchableOpacity>
+    
+            <Text style={styles.footertext}>ללא התחייבות</Text>
       </View>
     </TouchableOpacity>
    
@@ -144,21 +150,24 @@ const styles = StyleSheet.create({
     left:20,
     height:500,
   },
-
   card: {
     width: "100%",
     paddingVertical: 15,
     paddingHorizontal: 15,
   },
-
   cardheader: {
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "row",
   },
-
+  cardheadericon: {
+    width: 7,
+    padding: 2,
+    borderRadius: 50,
+    marginHorizontal: 3,
+  },
   cardheadertext: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "bold",
     color: "black",
     textAlign:"center",
@@ -171,22 +180,29 @@ const styles = StyleSheet.create({
     right:5,
     paddingVertical: 6,
   },
-  dot:{
-    color:"black",
-    backgroundColor:"pink",
-    borderRadius:30,
+  button:{
+    position: 'absolute',
+    width: '100%',
+    height: 42,
+    backgroundColor: '#7471F2',
+    borderRadius:12,
+    top:45,
   },
-  cardheadericon: {
-    width: 7,
-    padding: 2,
-    borderRadius: 50,
-    marginHorizontal: 3,
-
+  buttonTitle:{
+    color: '#FFFFFF',
+    fontSize: 24,
+    textAlign:'center',
+    marginLeft:15,
+    marginTop:5,
+    fontWeight:'bold',
   },
   footertext: {
     color: "#dadada",
     fontSize: 14,
-    fontWeight: "600",
+    fontWeight: "bold",
     letterSpacing: 0.2,
+    top:92,
+    left:10,
+    textAlign:'center',
   },
 });
