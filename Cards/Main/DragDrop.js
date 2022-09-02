@@ -30,6 +30,12 @@ const list = [
   {
     id: "two",
     cardname: "הוצאות ",
+  },
+  {
+    id: "three",
+    cardname: "מצב משתמש",
+    reciept:"322",
+    customers:"141",
   }
 ];
 
@@ -46,7 +52,12 @@ export function DragDrop() {
     return (
       <ScaleDecorator style={styles.body}>
         <View>
-          <TouchableOpacity activeOpacity={1} onLongPress={drag} disabled={isActive} style={[ styles.card, { backgroundColor: isActive ? "#f7f7fc" : item.backgroundColor },]}>
+          <TouchableOpacity 
+          activeOpacity={1} 
+          onLongPress={drag} 
+          disabled={isActive} 
+          style={[ 
+            styles.card, { backgroundColor: isActive ? "#f7f7fc" : item.backgroundColor },]}>
             <View
               style={{
                 width: "100%",
@@ -102,7 +113,7 @@ export function DragDrop() {
         <DraggableFlatList
           data={data}
           onDragEnd={({ data }) => setData(data)}
-          contentContainerStyle={{ alignItems: "center" }}
+          contentContainerStyle={{ paddingBottom:100 }}
           keyExtractor={(item) => item.id}
           renderItem={renderItem}
         />
@@ -119,6 +130,7 @@ const styles = StyleSheet.create({
     height: 100,
     alignItems: "center",
     justifyContent: "center",
+    
   },
   text: {
     color: "white",
@@ -129,8 +141,7 @@ const styles = StyleSheet.create({
   scrollview: {
     flex: 1,
     backgroundColor: "#fff",
-    position: "relative",
-    
+    position: "relative",  
   },
   card: {
     marginHorizontal: "auto",
@@ -142,7 +153,7 @@ const styles = StyleSheet.create({
     shadowColor: "#c0c0c0",
     paddingHorizontal: 12,
     marginVertical: -8,
-
+    marginLeft:10,
   },
   firsttext: {
     alignSelf: "flex-end",

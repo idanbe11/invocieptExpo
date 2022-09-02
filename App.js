@@ -48,7 +48,7 @@ import DragDrop from './Cards/Main/DragDrop';
 export default () => {
   return(
     <NavigationContainer>
-      <Planes/>
+      <HomePage/>
     </NavigationContainer>
   )
 }
