@@ -80,7 +80,7 @@ export default function GettingStart({text , onPress }) {
       width: '85%',
       height: 60,
       left: 35,
-      top: 180,
+      top: 140,
       backgroundColor: '#7471F2',
       borderRadius:16,     
     },
