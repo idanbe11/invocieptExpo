@@ -12,20 +12,53 @@ export default function Planes({ text, onPress , item}) {
       id: "1",
       title: "עסק מתחיל",
       text: "עד 50 קבלות / חשבוניות",
+      text2: "עד 50 קבלות הוצאה",
+      text3: "עד 100 לקוחות",
+      text4: "הפקת דוחות",
+      text5: "מחיר סליקה מיוחד",
+      text6: "ביט לעסקים",
+      text7: "הרשאה לרו''ח",
+      text8: "גיבוי מלא",
+      text9: "מחיר מיוחד לאתר",
     },
     {
       id: "2",
       title: "עסק מתקדם",
       text: "עד 350 קבלות / חשבוניות",
-
+      text2: "עד 50 קבלות הוצאה",
+      text3: "עד 100 לקוחות",
+      text4: "הפקת דוחות",
+      text5: "מחיר סליקה מיוחד",
+      text6: "ביט לעסקים",
+      text7: "הרשאה לרו''ח",
+      text8: "גיבוי מלא",
+      text9: "מחיר מיוחד לאתר",
     },
     {
       id: "3",
       title: "עסק גדול",
+      text: "עד 350 קבלות / חשבוניות",
+      text2: "עד 50 קבלות הוצאה",
+      text3: "עד 100 לקוחות",
+      text4: "הפקת דוחות",
+      text5: "מחיר סליקה מיוחד",
+      text6: "ביט לעסקים",
+      text7: "הרשאה לרו''ח",
+      text8: "גיבוי מלא",
+      text9: "מחיר מיוחד לאתר",
     },
     {
       id: "4",
       title: "עסק מקצועי",
+      text: "ללא מגבלה קבלות / חשבוניות",
+      text2: "עד 50 קבלות הוצאה",
+      text3: "עד 100 לקוחות",
+      text4: "הפקת דוחות",
+      text5: "מחיר סליקה מיוחד",
+      text6: "ביט לעסקים",
+      text7: "הרשאה לרו''ח",
+      text8: "גיבוי מלא",
+      text9: "מחיר מיוחד לאתר",
     },
   ];
  
@@ -73,6 +106,14 @@ export const Card = ({item}) =>
         </View>
         <View style={{ marginVertical: 13 }}>
               <Text style={styles.cardtext}>{item.text}</Text>
+              <Text style={styles.cardtext}>{item.text2}</Text>
+              <Text style={styles.cardtext}>{item.text3}</Text>
+              <Text style={styles.cardtext}>{item.text4}</Text>
+              <Text style={styles.cardtext}>{item.text5}</Text>
+              <Text style={styles.cardtext}>{item.text6}</Text>
+              <Text style={styles.cardtext}>{item.text7}</Text>
+              <Text style={styles.cardtext}>{item.text8}</Text>
+              <Text style={styles.cardtext}>{item.text9}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -128,6 +169,12 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     color: "black",
     right:5,
+    paddingVertical: 6,
+  },
+  dot:{
+    color:"black",
+    backgroundColor:"pink",
+    borderRadius:30,
   },
   cardheadericon: {
     width: 7,
