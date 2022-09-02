@@ -35,7 +35,7 @@ export default function gettingStart({text , onPress }) {
       position:'absolute',
       backgroundColor:'#7471F2',
       width: '32%',
-      height: 33,
+      height: 30,
       borderRadius:16,
       marginLeft:250,
       marginTop:15,

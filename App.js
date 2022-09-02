@@ -46,7 +46,7 @@ import DragDrop from './Cards/Main/DragDrop';
 export default () => {
   return(
     <NavigationContainer>
-      <VerifyRegisterinfo/>
+      <GettingStart/>
     </NavigationContainer>
   )
 }
