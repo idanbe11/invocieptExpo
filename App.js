@@ -12,6 +12,7 @@ import LoginSMS from './Cards/Login/LoginSMS';
 import ForgetPassword from './Cards/Login/ForgetPassword';
 import ChooseAccount from './Cards/Register/ChooseAccount';
 import ChooseBusiness from './Cards/Register/ChooseBusiness';
+import Planes from './Cards/Register/Planes';
 import RegisterAsEmail from './Cards/Register/RegisterAsEmail';
 import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
 import HomePage from './Cards/Main/HomePage';
@@ -32,8 +33,9 @@ import DragDrop from './Cards/Main/DragDrop';
 
       <Stack.Screen name="ChooseAccount" component={ChooseAccount}/>
         <Stack.Screen name="ChooseBusiness" component={ChooseBusiness}/>
-          <Stack.Screen name="RegisterAsEmail" component={RegisterAsEmail}/>
-            <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
+          <Stack.Screen name="Planes" component={Planes}/>
+            <Stack.Screen name="RegisterAsEmail" component={RegisterAsEmail}/>
+              <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
 
       <Stack.Screen name="HomePage" component={HomePage}/>
         <Stack.Screen name="ClearingPage" component={ClearingPage}/>
@@ -46,7 +48,7 @@ import DragDrop from './Cards/Main/DragDrop';
 export default () => {
   return(
     <NavigationContainer>
-      <GettingStart/>
+      <Planes/>
     </NavigationContainer>
   )
 }
