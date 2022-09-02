@@ -85,6 +85,6 @@ export default function ChooseAccount({text , onPress}) {
         color: 'white',
         textAlign:'center',
         marginTop:11,
-        marginLeft:30,
+        marginLeft:20,
     },
   });

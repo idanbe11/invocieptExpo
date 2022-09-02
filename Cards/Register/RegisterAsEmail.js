@@ -23,11 +23,11 @@ export default function ChooseAccount({text , onPress , route}) {
                   </View>
                 </TouchableOpacity>
                 <Text style={styles.emailRegister} > מייל</Text> 
-                <TextInput style={styles.inputMail} value={text} keyboardType="numeric" placeholder="הזן מייל"></TextInput>
+                <TextInput style={styles.inputMail} value={text} keyboardType="text" placeholder="הזן מייל"></TextInput>
 
                 <Text style={styles.PhoneRegister} > פלאפון </Text> 
                 <View style={styles.selectPhone}>
-                <RNPickerSelect  placeholder={{ label: "050", value: "050" }} onValueChange={(value) => console.log(value)} 
+                <RNPickerSelect placeholder={{ label: "050", value: "050" }} onValueChange={(value) => console.log(value)} 
                  items = {[
                      { label: "051", value: "051" },
                      { label: "052", value: "052" },
@@ -42,10 +42,10 @@ export default function ChooseAccount({text , onPress , route}) {
                 <TextInput style={styles.inputPhone} value={text} keyboardType="numeric" placeholder="הזן מספר פלאפון"></TextInput>
 
                 <Text style={styles.PasswordRegister} > סיסמא </Text> 
-                <TextInput style={styles.inputPassword} value={text} keyboardType="numeric" placeholder="הזן סיסמא"></TextInput>
+                <TextInput style={styles.inputPassword} value={text} keyboardType="text" placeholder="הזן סיסמא"></TextInput>
 
                 <Text style={styles.VerifyPasswordRegister} > אמת סיסמא </Text> 
-                <TextInput style={styles.inputVerifyPassword} value={text} keyboardType="numeric" placeholder=" הזן סיסמא שנית"></TextInput>
+                <TextInput style={styles.inputVerifyPassword} value={text} keyboardType="text" placeholder=" הזן סיסמא שנית"></TextInput>
 
                 <TouchableOpacity onPress={() => navigation.navigate('VerifyRegisterinfo')}>
                   <View style={styles.buttonRegister}>
@@ -85,7 +85,7 @@ export default function ChooseAccount({text , onPress , route}) {
         fontSize:22,
         color: 'black',
         textAlign:'center',
-        marginLeft:15,
+        marginLeft:8,
         marginTop:5,
     },
     button2:{
@@ -107,18 +107,18 @@ export default function ChooseAccount({text , onPress , route}) {
         fontSize:22,
         color: 'white',
         textAlign:'center',
-        marginLeft:15,
+        marginLeft:8,
         marginTop:5,
     },
     emailRegister:{
         position: 'absolute',
         width: 69,
-        height: 13,
+        height: 26,
         left: 290,
         top: 200,
         textAlign:'right',
         fontSize:20,
-        color:' #000000',
+        color:'#000000',
     },
     inputMail:{
         fontSize: 18,
@@ -138,7 +138,7 @@ export default function ChooseAccount({text , onPress , route}) {
      PhoneRegister:{
         position: 'absolute',
         width: 69,
-        height: 13,
+        height: 26,
         left: 290,
         top: 300,
         textAlign:'right',
@@ -176,7 +176,7 @@ export default function ChooseAccount({text , onPress , route}) {
      PasswordRegister:{
         position: 'absolute',
         width: 69,
-        height: 13,
+        height: 26,
         left: 290,
         top: 400,
         textAlign:'right',
@@ -201,7 +201,7 @@ export default function ChooseAccount({text , onPress , route}) {
       VerifyPasswordRegister:{
         position: 'absolute',
         width: 120,
-        height: 13,
+        height: 26,
         left: 242,
         top: 500,
         textAlign:'right',
@@ -228,7 +228,7 @@ export default function ChooseAccount({text , onPress , route}) {
         width: 281,
         height: 52,
         left: 65,
-        top: 698,
+        top: 650,
         backgroundColor: '#7471F2',
         borderRadius:12,
       },

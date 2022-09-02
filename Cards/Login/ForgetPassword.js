@@ -74,5 +74,6 @@ export default function ForgetPassword({text , onPress}) {
       fontSize: 22,
       marginTop: -9,
       color:'white',
+      height:25,
     },
   });

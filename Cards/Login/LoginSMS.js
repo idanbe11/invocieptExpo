@@ -93,7 +93,7 @@ export default function LoginSMS({text , onPress}) {
       color:'black',
       fontSize: 18,
       width:143,
-      height:13,    
+      height:21,    
       fontWeight: 'bold',
     },
     inputMail:{
@@ -144,6 +144,7 @@ export default function LoginSMS({text , onPress}) {
       fontSize: 22,
       marginTop: -9,
       color:'white',
+      height:25,
     },
     buttonGoogle: { 
       position: 'absolute',

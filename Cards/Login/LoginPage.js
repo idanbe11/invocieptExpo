@@ -29,8 +29,8 @@ export default function LoginPage({text , onPress }) {
                   </View>
                 </TouchableOpacity>
 
-                <TextInput style={styles.inputMail} value={text} keyboardType="numeric" placeholder="הזן מייל"></TextInput>
-                <TextInput style={styles.inputPassword} value={text} keyboardType="numeric" placeholder="הזן סיסמא"></TextInput>
+                <TextInput style={styles.inputMail} value={text} keyboardType="text" placeholder="הזן מייל"></TextInput>
+                <TextInput style={styles.inputPassword} value={text} keyboardType="text" placeholder="הזן סיסמא"></TextInput>
 
                 <TouchableOpacity onPress={() => navigation.navigate('ForgetPassword')}>
                   <View style={styles.buttonForget}>
@@ -107,7 +107,7 @@ export default function LoginPage({text , onPress }) {
       color:'black',
       fontSize: 18,
       width:143,
-      height:13,    
+      height:21,    
       fontWeight: 'bold',
     },
     inputMail:{
@@ -117,14 +117,14 @@ export default function LoginPage({text , onPress }) {
       width: 303,
       height: 35,
       left: 55,
-      top: 300,
+      top: 305,
       backgroundColor: 'white',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
       height: 1.4,
       width: 0.1
-    }
-    },
+      }
+  },
     inputPassword:{
       fontSize: 18,
       textAlign: 'right',
@@ -132,7 +132,7 @@ export default function LoginPage({text , onPress }) {
       width: 303,
       height: 35,
       left: 55,
-      top: 380,
+      top: 375,
       backgroundColor: 'white',
       shadowColor: 'rgba(169, 169, 169, 0.64)',
       shadowOffset: {
@@ -172,6 +172,7 @@ export default function LoginPage({text , onPress }) {
       textAlign:'center',
       fontSize: 22,
       marginTop: -9,
+      height:25,
       color:'white',
     },
     buttonGoogle: { 
