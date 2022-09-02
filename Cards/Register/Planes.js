@@ -11,12 +11,12 @@ export default function Planes({ text, onPress , item}) {
     {
       id: "1",
       title: "עסק מתחיל",
-      text: "עד 40 קבלות / חשבוניות",
+      text: "עד 50 קבלות / חשבוניות",
     },
     {
       id: "2",
       title: "עסק מתקדם",
-      text: "aaaa ",
+      text: "עד 350 קבלות / חשבוניות",
 
     },
     {
@@ -72,7 +72,7 @@ export const Card = ({item}) =>
           </View>
         </View>
         <View style={{ marginVertical: 13 }}>
-              <Text>{item.text}</Text>
+              <Text style={styles.cardtext}>{item.text}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -123,6 +123,11 @@ const styles = StyleSheet.create({
     textAlign:"center",
     marginLeft:55,
     marginTop: 25,
+  },
+  cardtext:{
+    fontWeight: "bold",
+    color: "black",
+    right:5,
   },
   cardheadericon: {
     width: 7,
