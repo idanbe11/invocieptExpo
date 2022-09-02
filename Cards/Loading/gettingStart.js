@@ -1,14 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity} from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
 import React, { useState } from "react";
-import GettingStart from './Icons/GettingStart.jpg';
+import GetStarted from './Icons/GetStarted.jpg';
+import { useNavigation } from '@react-navigation/native';
 
-export default function gettingStart({text , onPress }) { 
+export default function GettingStart({text , onPress }) {
+  const navigation = useNavigation(); 
     return (
       <SafeAreaView style={styles.body}>
-        <Image source={GettingStart} style={styles.ClearingBackground} />
+        <Image source={GetStarted} style={styles.ClearingBackground} />
             <View style={styles.container}>
-              <TouchableOpacity style={styles.havingAccount}>
+              <TouchableOpacity onPress={() => navigation.navigate('LoginPage')} style={styles.havingAccount}>
                 <Text style={styles.havingAccountTitle}>משתמש קיים?</Text>
               </TouchableOpacity>
                 <Text style={styles.Title}>נהל את העסק <Text style={styles.TitleColor}>בלחיצה </Text></Text>

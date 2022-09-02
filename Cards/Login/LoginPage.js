@@ -13,7 +13,7 @@ export default function LoginPage({text , onPress }) {
   const navigation = useNavigation();
 
     return (
-      <SafeAreaView style={styles.body}>
+      <SafeAreaView style={styles.body} >
   
   <Image source={LoginBackground} style={styles.LoginBackground} />
 

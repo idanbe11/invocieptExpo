@@ -2,7 +2,6 @@ import { StatusBar } from "expo-status-bar";
 import {StyleSheet,Text,View,Image,SafeAreaView,Button,Alert,TouchableHighlight,TouchableWithoutFeedback,TouchableOpacity,TextInput,Dimensions,FlatList,ScrollView, } from "react-native";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
-import Hamburger from "hamburger-react";
 
 import { Card } from "./Card";
 import { DragDrop } from "./DragDrop";
@@ -52,7 +51,6 @@ export default function HomePage({ text, onPress }) {
         <View style={styles.ProfileBackground}>
           <Image source={user} style={styles.ProfileIcon} />
         </View>
-        {/* <Hamburger toggled={isOpen} toggle={setOpen} /> */}
         <Image source={bell} style={styles.bellIcon} />
         <Text style={styles.HomeTitle}>
           ברוכים הבאים , (שם המשתמש)

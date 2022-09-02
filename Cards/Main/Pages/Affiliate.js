@@ -68,7 +68,7 @@ export default function Affiliate({text , onPress }) {
       backgroundColor: 'white',
     },
     pageMainTitle: {
-        fontSize:34,
+        fontSize:30,
         fontWeight:'bold',
         textAlign:'center',
         top:0,

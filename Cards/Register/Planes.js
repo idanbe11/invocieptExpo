@@ -80,7 +80,8 @@ export default function Planes({ text, onPress , item}) {
   );
 }
 export const Card = ({item}) => 
-{
+{  const navigation = useNavigation();
+
   return ( 
   
     <TouchableOpacity activeOpacity={0.8} style={styles.touchable}> 
@@ -114,7 +115,7 @@ export const Card = ({item}) =>
               <Text style={styles.cardtext}>{item.text9}</Text>
         </View>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('HomePage')}>
            <View style={styles.button}>
               <Text style={styles.buttonTitle}>בחר</Text>
             </View>
@@ -190,9 +191,9 @@ const styles = StyleSheet.create({
   },
   buttonTitle:{
     color: '#FFFFFF',
-    fontSize: 24,
+    fontSize: 25,
     textAlign:'center',
-    marginLeft:15,
+    marginLeft:8,
     marginTop:5,
     fontWeight:'bold',
   },

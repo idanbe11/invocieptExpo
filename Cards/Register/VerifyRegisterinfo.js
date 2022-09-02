@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
+import { useNavigation } from '@react-navigation/native';
 
 
 export default function VerifyRegisterinfo({text , onPress}) { 
   const handlePress= () => console.log("text pressed");
+  const navigation = useNavigation();
+
     return (
       <SafeAreaView style={styles.body}>
                 <Text style={styles.innerText}> אימות </Text>
@@ -17,7 +20,7 @@ export default function VerifyRegisterinfo({text , onPress}) {
                 <Text style={styles.VerifyPhoneRegister} >  מספר פלאפון </Text> 
                 <TextInput style={styles.inputVerifyPhone} value={text} keyboardType="numeric" placeholder="  הזן קוד  "></TextInput>
               
-                <TouchableOpacity onPress={onPress}>
+                <TouchableOpacity  onPress={() => navigation.navigate('Planes')}>
                   <View style={styles.buttonRegister}>
                     <Text style={styles.buttonRegisterTitle}> אמת </Text>
                   </View>

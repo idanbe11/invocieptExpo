@@ -45,7 +45,7 @@ if (Platform.OS === "android") {
     UIManager.setLayoutAnimationEnabledExperimental(true);
 }
 
-export function DragDrop() {
+export default function DragDrop() {
   const [data, setData] = useState(list);
 
   const renderItem = ({ item, drag, isActive }) => {
