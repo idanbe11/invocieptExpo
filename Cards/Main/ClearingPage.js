@@ -61,7 +61,6 @@ export default function ClearingPage({text , onPress ,item}) {
     },
     mainTitle: {
         fontSize:30,
-        fontWeight:700,
         textAlign:'center',
         color:'white',
         marginTop:10,
@@ -89,7 +88,6 @@ export default function ClearingPage({text , onPress ,item}) {
     },
     text: {
         fontSize:22,
-        fontWeight:600,
         marginTop:25,
         marginRight:12,
     },

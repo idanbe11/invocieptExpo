@@ -3,7 +3,6 @@ import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHigh
 import React, { useState } from "react";
 import GettingStart from './Icons/GettingStart.jpg';
 
-
 export default function gettingStart({text , onPress }) { 
     return (
       <SafeAreaView style={styles.body}>
