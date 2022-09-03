@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
-import ToggleSwitch from 'toggle-switch-react-native'
 
 import user from "./Icons/user.png";
 import Arrow from "./Icons/Arrow.png";
@@ -28,16 +27,9 @@ export default function Settings({text , onPress}) {
                 <Image source={darkMode} style={styles.darkModeIcon} />
             </View>
         <Text style={styles.darkModeTitle}>מצב כהה</Text>
-        <ToggleSwitch
-            isOn={false}
-            onPress={() => off(!on)}
-            onColor="green"
-            offColor="red"
-            size="medium"
-            onToggle={isOn => console.log("changed to : ", isOn)}
-            />
-        </View>
+        
 
+        </View>
         </View>
      
        
