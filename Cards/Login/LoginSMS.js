@@ -4,8 +4,11 @@ import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHigh
 import React, {useState} from 'react';
 import { useNavigation } from '@react-navigation/native';
 import LoginBackground from './Icons/LoginBackground.jpg';
+
 import Google from './Icons/Google.png';
 import facebook from './Icons/facebook.png';
+import Apple from './Icons/Apple.png';
+
 export default function LoginSMS({text , onPress}) { 
   const handlePress= () => console.log("text pressed");
   const navigation = useNavigation();
@@ -33,26 +36,28 @@ export default function LoginSMS({text , onPress}) {
                   </View>
                 </TouchableOpacity>
 
-                <TouchableOpacity onPress={onPress}>
-                  <View style={styles.buttonGoogle}>
-                    <Text style={styles.socialTitles}>התחבר באמצעות</Text>
+                <Text style={styles.orWithText}>או באמצעות</Text>
+
+                <View style={styles.row}>
+                  <TouchableOpacity onPress={onPress}>
+                    <Image source={Apple} style={styles.socialIcons} />
+                  </TouchableOpacity> 
+
+                  <TouchableOpacity onPress={onPress}>
                     <Image source={Google} style={styles.socialIcons} />
+                  </TouchableOpacity>
 
-                  </View>
-                </TouchableOpacity>
-
-                <TouchableOpacity onPress={onPress}>
-                  <View style={styles.buttonFacebook}>
-                    <Text style={styles.socialTitles}>התחבר באמצעות</Text>
+                  <TouchableOpacity onPress={onPress}>
                     <Image source={facebook} style={styles.socialIcons} />
+                  </TouchableOpacity>
+                </View>
 
-                  </View>
-                </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('ChooseAccount')}>
                   <View style={styles.buttonRegister}>
-                    <Text style={styles.buttonRegisterTitle}> הירשם </Text>
-                  </View>
+                    <Text style={styles.buttonRegisterTitle}>אין לך משתמש ?  <Text style={styles.registerNow}> הירשם עכשיו </Text>  </Text>
+                  </View>               
                 </TouchableOpacity>
+
               
       </SafeAreaView>
     );
@@ -101,15 +106,19 @@ export default function LoginSMS({text , onPress}) {
       textAlign: 'right',
       position: 'absolute',
       width: 303,
-      height: 35,
-      left: 55,
-      top: 300,
+      height: 40,
+      left: 50,
+      top: 300,    
+      borderRadius: 6,
+      elevation: 8,
       backgroundColor: 'white',
-      shadowColor: 'rgba(169, 169, 169, 0.64)',
+      shadowColor: "#a9a9a9",
       shadowOffset: {
-      height: 1.4,
-      width: 0.1
-    }
+        width: 2,
+        height: 3,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
     },
     buttonForget: { 
       position:'absolute',
@@ -146,61 +155,35 @@ export default function LoginSMS({text , onPress}) {
       color:'white',
       height:25,
     },
-    buttonGoogle: { 
-      position: 'absolute',
-      width: 253,
-      height: 52,
-      left: 74,
-      top: 350,
-      shadowColor: "#a9a9a9",
-      borderRadius: 10,
-      shadowOffset: {
-        width: 1,
-        height: 1.8,
-      },
-      borderRadius: 12,
-    },
-    socialTitles: { 
-      fontWeight: 'bold',
+    orWithText:{
+      fontWeight:'bold',
       textAlign:'center',
-      fontSize: 18,
-      marginTop: 15,
-      color:'black',
+      left:8,
+      top:340,
+      fontSize:15,
     },
+
     socialIcons:{
-      width:26,
-      height:26,
-      top:-25,
-      left:16,
+      width:43,
+      height:43,
+      marginTop:362,
+      left:-12,
+      position:'absolute',
     },
-    buttonFacebook: { 
-      position: 'absolute',
-      width: 253,
-      height: 52,
-      left: 74,
-      top: 430,
-      shadowColor: "#a9a9a9",
-      borderRadius: 10,
-      shadowOffset: {
-        width: 1,
-        height: 1.8,
+    row:{
+      flexDirection: 'row',  
+      justifyContent: 'space-evenly',
+      paddingHorizontal: 15,
       },
-      borderRadius: 12,
-    },
-    buttonRegister: { 
-      position: 'absolute',
-      width: '100%',
-      height: 60,
-      left: 0.2,
-      top: 555,
-      backgroundColor: '#7471F2',
-    },
     buttonRegisterTitle: { 
       fontWeight: 'bold',
       textAlign:'center',
-      fontSize: 24,
-      marginTop: 10,
-      marginLeft:26,
-      color: 'white',
+      fontSize: 17,
+      left: 2,
+      top: 460,
+      color: 'black',
+    },
+    registerNow:{
+      color:'#7471F2',
     },
   });

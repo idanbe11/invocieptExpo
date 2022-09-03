@@ -128,12 +128,16 @@ export default function ChooseAccount({text , onPress , route}) {
         height: 35,
         left: 55,
         top: 242,
-        backgroundColor:'white',
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
+        borderRadius: 6,
+        elevation: 8,
+        backgroundColor: 'white',
+        shadowColor: "#a9a9a9",
         shadowOffset: {
-        height: 1.4,
-        width: 0.1
-      }
+          width: 2,
+          height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
       },
      PhoneRegister:{
         position: 'absolute',
@@ -153,25 +157,35 @@ export default function ChooseAccount({text , onPress , route}) {
         height: 35,
         left: 135,
         top: 340,
-        backgroundColor:'white',
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
+        borderRadius: 6,
+        elevation: 8,
+        backgroundColor: 'white',
+        shadowColor: "#a9a9a9",
         shadowOffset: {
-        height: 1.4,
-        width: 0.1
-      }
+          width: 2,
+          height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
       },
      selectPhone:{
+        color:'black',
         fontSize: 18,
         position: 'absolute',
-        width: 55,
+        width: 60,
         height: 35,
         left: 55,
         top: 340,
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
+        borderRadius: 6,
+        elevation: 8,
+        backgroundColor: 'white',
+        shadowColor: "#a9a9a9",
         shadowOffset: {
-        height: 1.4,
-        width: 0.1
-      }
+          width: 2,
+          height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
       },
      PasswordRegister:{
         position: 'absolute',
@@ -191,12 +205,16 @@ export default function ChooseAccount({text , onPress , route}) {
         height: 35,
         left: 55,
         top: 440,
-        backgroundColor:'white',
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
+        borderRadius: 6,
+        elevation: 8,
+        backgroundColor: 'white',
+        shadowColor: "#a9a9a9",
         shadowOffset: {
-        height: 1.4,
-        width: 0.1
-      }
+          width: 2,
+          height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
       },
       VerifyPasswordRegister:{
         position: 'absolute',
@@ -216,12 +234,16 @@ export default function ChooseAccount({text , onPress , route}) {
         height: 35,
         left: 55,
         top: 540,
-        backgroundColor:'white',
-        shadowColor: 'rgba(169, 169, 169, 0.64)',
-      shadowOffset: {
-      height: 1.4,
-      width: 0.1
-    }
+        borderRadius: 6,
+        elevation: 8,
+        backgroundColor: 'white',
+        shadowColor: "#a9a9a9",
+        shadowOffset: {
+          width: 2,
+          height: 3,
+        },
+        shadowOpacity: 0.27,
+        shadowRadius: 4.65,
       },
       buttonRegister:{
         position: 'absolute',

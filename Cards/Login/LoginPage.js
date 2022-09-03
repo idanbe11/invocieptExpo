@@ -116,30 +116,38 @@ export default function LoginPage({text , onPress }) {
       textAlign: 'right',
       position: 'absolute',
       width: 303,
-      height: 35,
+      height: 38,
       left: 55,
       top: 305,
+      borderRadius: 6,
+      elevation: 8,
       backgroundColor: 'white',
-      shadowColor: 'rgba(169, 169, 169, 0.64)',
+      shadowColor: "#a9a9a9",
       shadowOffset: {
-      height: 1.4,
-      width: 0.1
-      }
+        width: 2,
+        height: 3,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
   },
     inputPassword:{
       fontSize: 18,
       textAlign: 'right',
       position: 'absolute',
       width: 303,
-      height: 35,
+      height: 38,
       left: 55,
       top: 375,
+      borderRadius: 6,
+      elevation: 8,
       backgroundColor: 'white',
-      shadowColor: 'rgba(169, 169, 169, 0.64)',
+      shadowColor: "#a9a9a9",
       shadowOffset: {
-      height: 1.4,
-      width: 0.1
-      }
+        width: 2,
+        height: 3,
+      },
+      shadowOpacity: 0.27,
+      shadowRadius: 4.65,
     },
     buttonForget: { 
       position:'absolute',
