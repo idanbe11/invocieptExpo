@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-import user from "./Icons/user.png";
+//icons
 import Arrow from "./Icons/Arrow.png";
 import darkMode from "./Icons/darkMode.png";
 import padlock from "./Icons/padlock.png";
@@ -12,6 +13,8 @@ import profile from "./Icons/profile.png";
 
 
 export default function Settings({text , onPress}) { 
+    const navigation = useNavigation();
+
     return (
       <SafeAreaView style={styles.body}>
         <Text style={styles.pageTitle}>הגדרות</Text>
@@ -19,7 +22,7 @@ export default function Settings({text , onPress}) {
         <View style={styles.background}> 
         <TouchableOpacity>
         <View style={styles.lineBackground}>
-                <Image source={profile} style={styles.ProfileIcon} />
+                <Image source={profile} style={styles.Icons} />
         <Text style={styles.userName}>שם העסק שלך</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
         </View> 
@@ -34,7 +37,7 @@ export default function Settings({text , onPress}) {
         </View>
         <TouchableOpacity>
         <View style={styles.lineBackground}>
-                <Image source={padlock} style={styles.ProfileIcon} />
+                <Image source={padlock} style={styles.Icons} />
         <Text style={styles.userName}>שינוי סיסמא</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
         </View> 
@@ -42,15 +45,15 @@ export default function Settings({text , onPress}) {
 
         <TouchableOpacity>
         <View style={styles.lineBackground}>
-                <Image source={cpa} style={styles.ProfileIcon} />
+                <Image source={cpa} style={styles.Icons} />
         <Text style={styles.userName}>שיתוף קבלות הוצאה</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
         </View> 
         </TouchableOpacity>
 
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('Affiliate')}>
         <View style={styles.lineBackground}>
-                <Image source={handshake} style={styles.ProfileIcon} />
+                <Image source={handshake} style={styles.Icons} />
         <Text style={styles.userName}>שיתוף פעולה</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
         </View> 
@@ -58,7 +61,7 @@ export default function Settings({text , onPress}) {
 
         <TouchableOpacity>
         <View style={styles.lineBackground}>
-                <Image source={cloud} style={styles.ProfileIcon} />
+                <Image source={cloud} style={styles.Icons} />
         <Text style={styles.userName}>גיבוי מלא</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
         </View> 
@@ -95,7 +98,7 @@ export default function Settings({text , onPress}) {
       elevation: 4,
       borderRadius:12,
     },
-    ProfileIcon: {
+    Icons: {
         width: 42,
         height: 42,
         left:325,
@@ -107,7 +110,7 @@ export default function Settings({text , onPress}) {
         height: 50,
         borderRadius: 12,
         elevation: 3,
-        marginBottom: 12,
+        marginBottom: 14,
     }, 
     userName: {
        fontWeight:'bold',
