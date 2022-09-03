@@ -86,7 +86,7 @@ export default function DragDrop() {
               <View>
                 <Text style={styles.secondcontainertext}>הכנסות חודש שעבר</Text>
                 <Text style={[styles.moneyPassM, { color: "#9c9c9c" }]}>
-                  11,999.99
+                  12,999.99
                 </Text>
               </View>
               <View>

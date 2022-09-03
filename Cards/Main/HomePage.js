@@ -1,10 +1,10 @@
 import { StatusBar } from "expo-status-bar";
-import {StyleSheet,Text,View,Image,SafeAreaView,Button,Alert,TouchableHighlight,TouchableWithoutFeedback,TouchableOpacity,TextInput,Dimensions,FlatList,ScrollView, } from "react-native";
+import {StyleSheet,Text,View,Image,SafeAreaView,Button,TouchableHighlight,TouchableWithoutFeedback,TouchableOpacity,Dimensions,FlatList,ScrollView, } from "react-native";
 import React, { useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 
 import { Card } from "./Card";
-import { DragDrop } from "./DragDrop";
+import  DragDrop  from './DragDrop';
 
 //icons
 import user from "./Icons/user.png";
@@ -12,7 +12,6 @@ import emoji from "./Icons/smilingEmoji.png";
 import bell from "./Icons/bell.png";
 
 export default function HomePage({ text, onPress }) {
-  const handlePress = () => console.log("text pressed");
   const navigation = useNavigation();
   const [isOpen, setOpen] = useState(false);
   const [value, setValue] = useState(0);
