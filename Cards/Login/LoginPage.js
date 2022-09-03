@@ -62,9 +62,9 @@ export default function LoginPage({text , onPress }) {
                 </View>
 
                 <TouchableOpacity onPress={() => navigation.navigate('ChooseAccount')}>
-                  <View style={styles.buttonRegister}>
+                
                     <Text style={styles.buttonRegisterTitle}>אין לך משתמש ?  <Text style={styles.registerNow}> הירשם עכשיו </Text>  </Text>
-                  </View>
+                 
                 </TouchableOpacity>
               
       </SafeAreaView>
