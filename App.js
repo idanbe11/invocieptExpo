@@ -21,7 +21,6 @@ import VerifyRegisterinfo from './Cards/Register/VerifyRegisterinfo';
 
 //HomePage
 import HomePage from './Cards/Main/HomePage';
-import DragDrop from './Cards/Main/DragDrop';
 
 //Pages
 import Affiliate from './Cards/Main/Pages/Affiliate';
@@ -49,11 +48,10 @@ import ClearingPage from './Cards/Main/Pages/ClearingPage';
               <Stack.Screen name="VerifyRegisterinfo" component={VerifyRegisterinfo}/>
 {/*HomePage*/}        
       <Stack.Screen name="HomePage" component={HomePage}/>
-        <Stack.Screen name="ClearingPage" component={ClearingPage}/>
-        <Stack.Screen name="DragDrop" component={DragDrop}/>
 {/* Pages*/}        
           <Stack.Screen name="Affiliate" component={Affiliate}/>
           <Stack.Screen name="Settings" component={Settings}/>
+          <Stack.Screen name="ClearingPage" component={ClearingPage}/>
 
   </Stack.Navigator> 
      
@@ -62,7 +60,7 @@ import ClearingPage from './Cards/Main/Pages/ClearingPage';
 export default () => {
   return(
     <NavigationContainer>
-      <Settings/>
+      <App/>
     </NavigationContainer>
   )
 }
