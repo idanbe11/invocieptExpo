@@ -54,7 +54,7 @@ import Affiliate from './Cards/Main/Pages/Affiliate';
 export default () => {
   return(
     <NavigationContainer>
-      <App/>
+      <LoginPage/>
     </NavigationContainer>
   )
 }
