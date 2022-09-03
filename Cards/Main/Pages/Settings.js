@@ -7,7 +7,7 @@ import Arrow from "./Icons/Arrow.png";
 import darkMode from "./Icons/darkMode.png";
 import padlock from "./Icons/padlock.png";
 import cpa from "./Icons/cpa.png";
-import handshake from "./Icons/handshake.png";
+import notification from "./Icons/notification.png";
 import cloud from "./Icons/cloud.png";
 import profile from "./Icons/profile.png";
 
@@ -20,6 +20,14 @@ export default function Settings({text , onPress}) {
         <Text style={styles.pageTitle}>הגדרות</Text>
        
         <View style={styles.background}> 
+        <View style={styles.lineBackground}>
+            <View style={styles.darkMode}>   
+                <Image source={darkMode} style={styles.darkModeIcon} />
+            </View>
+        <Text style={styles.darkModeTitle}>מצב כהה</Text>
+        </View>
+
+<Text style={styles.categoryText}>פרופיל</Text>
         <TouchableOpacity>
         <View style={styles.lineBackground}>
                 <Image source={profile} style={styles.Icons} />
@@ -28,13 +36,6 @@ export default function Settings({text , onPress}) {
         </View> 
         </TouchableOpacity>
 
-        <View style={styles.lineBackground}>
-            <View style={styles.darkMode}>   
-                <Image source={darkMode} style={styles.darkModeIcon} />
-            </View>
-        <Text style={styles.darkModeTitle}>מצב כהה</Text>
-
-        </View>
         <TouchableOpacity>
         <View style={styles.lineBackground}>
                 <Image source={padlock} style={styles.Icons} />
@@ -51,14 +52,6 @@ export default function Settings({text , onPress}) {
         </View> 
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => navigation.navigate('Affiliate')}>
-        <View style={styles.lineBackground}>
-                <Image source={handshake} style={styles.Icons} />
-        <Text style={styles.userName}>שיתוף פעולה</Text>
-        <Image source={Arrow} style={styles.arrowIcon} />
-        </View> 
-        </TouchableOpacity>
-
         <TouchableOpacity>
         <View style={styles.lineBackground}>
                 <Image source={cloud} style={styles.Icons} />
@@ -67,6 +60,30 @@ export default function Settings({text , onPress}) {
         </View> 
         </TouchableOpacity>
 
+<Text style={styles.categoryText}>התראות</Text>
+        <TouchableOpacity>
+        <View style={styles.lineBackground}>
+                <Image source={notification} style={styles.Icons} />
+        <Text style={styles.userName}>התראות</Text>
+        <Image source={Arrow} style={styles.arrowIcon} />
+        </View> 
+        </TouchableOpacity>
+<Text style={styles.categoryText}>אזורי</Text>
+        <TouchableOpacity>
+        <View style={styles.lineBackground}>
+                <Image source={cloud} style={styles.Icons} />
+        <Text style={styles.userName}>שפה</Text>
+        <Image source={Arrow} style={styles.arrowIcon} />
+        </View> 
+        </TouchableOpacity>
+        
+        <TouchableOpacity>
+        <View style={styles.lineBackground}>
+                <Image source={cloud} style={styles.Icons} />
+        <Text style={styles.userName}>התנתקות</Text>
+        <Image source={Arrow} style={styles.arrowIcon} />
+        </View> 
+        </TouchableOpacity>
         </View>
      
        
@@ -146,5 +163,12 @@ export default function Settings({text , onPress}) {
         left:325,
         borderRadius:12,
         elevation: 4,
+    },
+    categoryText:{
+        color:'#969696',
+        fontWeight:'bold',
+        fontSize:16,
+        top:13,
+        right:25,
     },
   });
