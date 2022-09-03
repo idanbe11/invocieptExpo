@@ -17,7 +17,7 @@ export default function Affiliate({text , onPress }) {
             <Text style={styles.pageTitle}>הקישורים שלי</Text>
             <Text style={styles.PageSubTitle}>קישור המלצה על השירות</Text>
 
-        <TextInput style={styles.inputMail} value={text} keyboardType="text" placeholder="הזן מייל"></TextInput>
+        <TextInput style={styles.inputMail} numberOfLines={1} value={text} keyboardType="text" placeholder="http://www.invoceipt.co.il/recommend?aff=625300"></TextInput>
         
         <Text style={styles.text}>מומלץ לשתף את הקישור הזה למי שרוצים להפנות אלינו</Text>
        
@@ -89,12 +89,14 @@ export default function Affiliate({text , onPress }) {
       fontSize: 18,
       textAlign: 'right',
       position: 'absolute',
-      width: 303,
+      width: 350,
       height: 35,
-      left: 55,
+      left: 30,
       top: 395,
-      backgroundColor: 'white',
-      shadowColor: 'rgba(169, 169, 169, 0.64)',
+      elevation: 4,
+      borderRadius:8,
+      backgroundColor: 'white',    
+      shadowColor: 'grey',
       shadowOffset: {
       height: 1.4,
       width: 0.1
