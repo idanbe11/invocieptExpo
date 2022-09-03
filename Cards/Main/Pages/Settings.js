@@ -4,6 +4,11 @@ import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHigh
 import user from "./Icons/user.png";
 import Arrow from "./Icons/Arrow.png";
 import darkMode from "./Icons/darkMode.png";
+import padlock from "./Icons/padlock.png";
+import cpa from "./Icons/cpa.png";
+import handshake from "./Icons/handshake.png";
+import cloud from "./Icons/cloud.png";
+import profile from "./Icons/profile.png";
 
 
 export default function Settings({text , onPress}) { 
@@ -14,9 +19,7 @@ export default function Settings({text , onPress}) {
         <View style={styles.background}> 
         <TouchableOpacity>
         <View style={styles.lineBackground}>
-            <View style={styles.profileBackground}>        
-                <Image source={user} style={styles.ProfileIcon} />
-            </View>
+                <Image source={profile} style={styles.ProfileIcon} />
         <Text style={styles.userName}>שם העסק שלך</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
         </View> 
@@ -27,9 +30,40 @@ export default function Settings({text , onPress}) {
                 <Image source={darkMode} style={styles.darkModeIcon} />
             </View>
         <Text style={styles.darkModeTitle}>מצב כהה</Text>
-        
 
         </View>
+        <TouchableOpacity>
+        <View style={styles.lineBackground}>
+                <Image source={padlock} style={styles.ProfileIcon} />
+        <Text style={styles.userName}>שינוי סיסמא</Text>
+        <Image source={Arrow} style={styles.arrowIcon} />
+        </View> 
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+        <View style={styles.lineBackground}>
+                <Image source={cpa} style={styles.ProfileIcon} />
+        <Text style={styles.userName}>שיתוף קבלות הוצאה</Text>
+        <Image source={Arrow} style={styles.arrowIcon} />
+        </View> 
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+        <View style={styles.lineBackground}>
+                <Image source={handshake} style={styles.ProfileIcon} />
+        <Text style={styles.userName}>שיתוף פעולה</Text>
+        <Image source={Arrow} style={styles.arrowIcon} />
+        </View> 
+        </TouchableOpacity>
+
+        <TouchableOpacity>
+        <View style={styles.lineBackground}>
+                <Image source={cloud} style={styles.ProfileIcon} />
+        <Text style={styles.userName}>גיבוי מלא</Text>
+        <Image source={Arrow} style={styles.arrowIcon} />
+        </View> 
+        </TouchableOpacity>
+
         </View>
      
        
@@ -62,9 +96,9 @@ export default function Settings({text , onPress}) {
       borderRadius:12,
     },
     ProfileIcon: {
-        width: 23,
-        height: 25,
-        left:10,
+        width: 42,
+        height: 42,
+        left:325,
         top:5,
     },
     lineBackground: {
@@ -73,7 +107,7 @@ export default function Settings({text , onPress}) {
         height: 50,
         borderRadius: 12,
         elevation: 3,
-        
+        marginBottom: 12,
     }, 
     userName: {
        fontWeight:'bold',
@@ -81,15 +115,6 @@ export default function Settings({text , onPress}) {
        right:77,
        top:-24,    
        color:'black',   
-    },
-    profileBackground:{
-        backgroundColor:'#dad9ff',
-        width:43,
-        height:38,
-        top:7,
-        left:325,
-        borderRadius:12,
-        elevation: 3,
     },
     arrowIcon:{
         width: 20,
