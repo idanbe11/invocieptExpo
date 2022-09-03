@@ -78,7 +78,7 @@ export default function Settings({text , onPress}) {
     arrowIcon:{
         width: 20,
         height: 18,
-        top:-45,
-        left:15,  
+        top:-43,
+        left:25,  
     }
   });
