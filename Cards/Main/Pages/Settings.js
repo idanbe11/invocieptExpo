@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
+import ToggleSwitch from 'toggle-switch-react-native'
 
 import user from "./Icons/user.png";
 import Arrow from "./Icons/Arrow.png";
+import darkMode from "./Icons/darkMode.png";
 
 
 export default function Settings({text , onPress}) { 
@@ -18,9 +20,27 @@ export default function Settings({text , onPress}) {
             </View>
         <Text style={styles.userName}>שם העסק שלך</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
-        </View>
+        </View> 
         </TouchableOpacity>
+
+        <View style={styles.lineBackground}>
+            <View style={styles.darkMode}>   
+                <Image source={darkMode} style={styles.darkModeIcon} />
+            </View>
+        <Text style={styles.darkModeTitle}>מצב כהה</Text>
+        <ToggleSwitch
+            isOn={false}
+            onPress={() => off(!on)}
+            onColor="green"
+            offColor="red"
+            size="medium"
+            onToggle={isOn => console.log("changed to : ", isOn)}
+            />
         </View>
+
+        </View>
+     
+       
       </SafeAreaView>
     );
   }
@@ -61,6 +81,7 @@ export default function Settings({text , onPress}) {
         height: 50,
         borderRadius: 12,
         elevation: 3,
+        
     }, 
     userName: {
        fontWeight:'bold',
@@ -76,11 +97,34 @@ export default function Settings({text , onPress}) {
         top:7,
         left:325,
         borderRadius:12,
+        elevation: 3,
     },
     arrowIcon:{
         width: 20,
         height: 18,
         top:-43,
         left:25,  
-    }
+    },
+    darkModeTitle:{
+        color:'black',
+        fontWeight:'bold',
+        fontSize:15,
+        top:-24,    
+        right:77,
+    },
+    darkModeIcon:{
+        width: 23,
+        height: 25,
+        left:11,
+        top:6,
+    },
+    darkMode:{
+        backgroundColor:'white',
+        width:43,
+        height:38,
+        top:7,
+        left:325,
+        borderRadius:12,
+        elevation: 4,
+    },
   });
