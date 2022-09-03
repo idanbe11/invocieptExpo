@@ -9,15 +9,17 @@ export default function Settings({text , onPress}) {
     return (
       <SafeAreaView style={styles.body}>
         <Text style={styles.pageTitle}>הגדרות</Text>
-        <View style={styles.background}>
+       
+        <View style={styles.background}> 
+        <TouchableOpacity>
         <View style={styles.lineBackground}>
             <View style={styles.profileBackground}>        
                 <Image source={user} style={styles.ProfileIcon} />
             </View>
         <Text style={styles.userName}>שם העסק שלך</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
-
         </View>
+        </TouchableOpacity>
         </View>
       </SafeAreaView>
     );
