@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import {Text,View,StyleSheet,TouchableOpacity,UIManager,Dimensions,FlatList} from "react-native";
+import {Text,View,StyleSheet,TouchableOpacity,UIManager,Dimensions,FlatList,Image} from "react-native";
 import DraggableFlatList, { ScaleDecorator,RenderItemParams,} from "react-native-draggable-flatlist";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
-import { StatusBar } from "expo-status-bar";
 
 
 const { width } = Dimensions.get("window");
@@ -68,21 +67,7 @@ export default function DragDrop() {
             </View>
             <View style={styles.cardtext}>
 
-            <TouchableOpacity style={styles.textButtons}>
-              <Text style={styles.textCard}>{item.text}</Text>
-            </TouchableOpacity>
-
-            <TouchableOpacity style={styles.textButtons}>
-              <Text style={styles.textCard}>{item.text2}</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity style={styles.textButtons}>
-              <Text style={styles.textCard}>{item.text3}</Text>
-              </TouchableOpacity>
-              
-              <TouchableOpacity style={styles.textButtons}>
-              <Text style={styles.textCard}>{item.text4}</Text>
-              </TouchableOpacity>
+           
               {/* <Text>{item.May}</Text>
               <Text>{item.Jun}</Text>
               <Text>{item.Jul}</Text>
@@ -90,7 +75,22 @@ export default function DragDrop() {
               <Text>{item.Sep}</Text>
               <Text>{item.Oct}</Text>
               <Text>{item.Nov}</Text>
-              <Text>{item.Dec}</Text>*/}
+              <Text>{item.Dec}</Text>*/} 
+            <TouchableOpacity style={styles.textButtons}>
+              <Text style={styles.textCard}>{item.text4}</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.textButtons}>
+              <Text style={styles.textCard}>{item.text3}</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity style={styles.textButtons}>
+              <Text style={styles.textCard}>{item.text2}</Text>
+            </TouchableOpacity>
+              
+            <TouchableOpacity style={styles.textButtons}>
+              <Text style={styles.textCard}>{item.text}</Text>
+            </TouchableOpacity>
         </View>
 
           </TouchableOpacity>
@@ -170,4 +170,5 @@ const styles = StyleSheet.create({
   color:'#425CE2',
   top:10,
   },
+
 });
