@@ -10,6 +10,8 @@ import cpa from "./Icons/cpa.png";
 import notification from "./Icons/notification.png";
 import cloud from "./Icons/cloud.png";
 import profile from "./Icons/profile.png";
+import translation from "./Icons/translation.png";
+import logout from "./Icons/logout.png";
 
 
 export default function Settings({text , onPress}) { 
@@ -71,7 +73,7 @@ export default function Settings({text , onPress}) {
 <Text style={styles.categoryText}>אזורי</Text>
         <TouchableOpacity>
         <View style={styles.lineBackground}>
-                <Image source={cloud} style={styles.Icons} />
+                <Image source={translation} style={styles.Icons} />
         <Text style={styles.userName}>שפה</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
         </View> 
@@ -79,7 +81,7 @@ export default function Settings({text , onPress}) {
         
         <TouchableOpacity>
         <View style={styles.lineBackground}>
-                <Image source={cloud} style={styles.Icons} />
+                <Image source={logout} style={styles.Icons} />
         <Text style={styles.userName}>התנתקות</Text>
         <Image source={Arrow} style={styles.arrowIcon} />
         </View> 

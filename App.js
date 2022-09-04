@@ -60,7 +60,7 @@ import ClearingPage from './Cards/Main/Pages/ClearingPage';
 export default () => {
   return(
     <NavigationContainer>
-      <App/>
+      <Settings/>
     </NavigationContainer>
   )
 }
