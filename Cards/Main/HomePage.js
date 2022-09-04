@@ -42,6 +42,7 @@ export default function HomePage({ text, onPress }) {
       id: "5",
       title: "סליקה     ",
       img: require("./Icons/creditcard.png"),
+      screen:'ClearingPage',
     },
   ];
   return (

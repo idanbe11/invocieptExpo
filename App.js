@@ -62,7 +62,7 @@ import Expense from './Cards/Main/Pages/Expense';
 export default () => {
   return(
     <NavigationContainer>
-      <Expense/>
+      <App/>
     </NavigationContainer>
   )
 }

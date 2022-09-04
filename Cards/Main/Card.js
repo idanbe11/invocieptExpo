@@ -7,12 +7,15 @@ import youtube from "./Icons/youtube.png";
 import rating from "./Icons/rating.png";
 import receipt from "./Icons/receipt.png";
 const { width, height } = Dimensions.get("window");
+import { useNavigation } from "@react-navigation/native";
 
 export const Card = ({item}) => 
-{
+{  
+  const navigation = useNavigation();
+
   return ( 
   
-    <TouchableOpacity activeOpacity={0.8} style={styles.touchable}>
+    <TouchableOpacity onPress={() => navigation.navigate(item.screen)} activeOpacity={0.8} style={styles.touchable}>
       <View style={styles.card}>
         <View style={styles.cardheader}>
           <Text style={styles.cardheadertext}>{item.title} </Text>
