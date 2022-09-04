@@ -33,10 +33,10 @@ const list = [
   {
     id: "three",
     cardname: "לפי שנה",
-    text:"2019",
-    text2:"2020",
-    text3:"2021",
-    text4:"2022",
+    text:"2022",
+    text2:"2023",
+    text3:"2024",
+    text4:"2025",
   }
 ];
 
