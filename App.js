@@ -27,6 +27,7 @@ import Affiliate from './Cards/Main/Pages/Affiliate';
 import Settings from './Cards/Main/Pages/Settings';
 import ClearingPage from './Cards/Main/Pages/ClearingPage';
 import Expense from './Cards/Main/Pages/Expense';
+import Customers from './Cards/Main/Pages/Customers';
 
 
  function App() {
@@ -54,6 +55,7 @@ import Expense from './Cards/Main/Pages/Expense';
           <Stack.Screen name="Settings" component={Settings}/>
           <Stack.Screen name="ClearingPage" component={ClearingPage}/>
           <Stack.Screen name="Expense" component={Expense}/>
+          <Stack.Screen name="Customers" component={Customers}/>
 
   </Stack.Navigator> 
      
@@ -62,7 +64,7 @@ import Expense from './Cards/Main/Pages/Expense';
 export default () => {
   return(
     <NavigationContainer>
-      <App/>
+      <Customers/>
     </NavigationContainer>
   )
 }
