@@ -16,9 +16,9 @@ class Customers extends React.Component {
       render(){ 
         const state = this.state;
         const tableData = [];
-        for (let i = 0; i < 5; i += 1) {
+        for (let i = 0; i < 6; i += 1) {
           const rowData = ["משה שמיר 3","0535311471","אלדר"];
-          for (let j = 0; j < 5; j += 1) {
+          for (let j = 0; j < 6; j += 1) {
             rowData.push(`${i}${j}`);
           }
           tableData.push(rowData);
@@ -27,8 +27,7 @@ class Customers extends React.Component {
 
     return (
       <SafeAreaView style={styles.body}>
-        <Image source={customers} style={styles.CustomersBackground} />
-        
+       <Image source={customers} style={styles.CustomersBackground} />
             <View style={styles.container}>
                 <View style={styles.subContainer}>
                     <Text style={styles.mainTitle}>לקוחות שלי</Text>
@@ -69,8 +68,7 @@ class Customers extends React.Component {
           </View>
         </ScrollView>
       </View>
-
-            </View>        
+            </View>    
         </SafeAreaView>
     );
 }}
@@ -171,5 +169,8 @@ addCustomersButtonText:{
     fontSize:18,
     fontWeight:'700',
     top:5,
-},
+},  scrollView: {
+    backgroundColor: 'pink',
+    marginHorizontal: 20,
+  },
   });
