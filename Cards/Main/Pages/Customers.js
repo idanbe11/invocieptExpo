@@ -16,9 +16,9 @@ class Customers extends React.Component {
       render(){ 
         const state = this.state;
         const tableData = [];
-        for (let i = 0; i < 6; i += 1) {
-          const rowData = [];
-          for (let j = 0; j < 6; j += 2) {
+        for (let i = 0; i < 5; i += 1) {
+          const rowData = ["משה שמיר 3","0535311471","אלדר"];
+          for (let j = 0; j < 5; j += 1) {
             rowData.push(`${i}${j}`);
           }
           tableData.push(rowData);
@@ -127,7 +127,7 @@ export default (Customers);
     textAlign: 'center', 
     fontWeight: '700' ,
     color:'black',
-    fontSize:18,
+    fontSize:17,
 },
   dataWrapper: { 
     marginTop: -1 ,
