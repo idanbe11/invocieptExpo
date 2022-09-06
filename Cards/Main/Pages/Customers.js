@@ -1,14 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, SafeAreaView,Button,Alert, TouchableHighlight,TouchableWithoutFeedback, TouchableOpacity , TextInput} from 'react-native';
 import React, { useState } from "react";
+import { Table, TableWrapper, Cell, Row, Rows, Col, Cols } from 'react-native-table-component';
 
 import customers from './Icons/customers.png';
 
 
 export default function Customers({text , onPress ,item}) { 
-  
-
-
     return (
       <SafeAreaView style={styles.body}>
         <Image source={customers} style={styles.CustomersBackground} />
